@@ -1,0 +1,11 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "5J4WSE22AB.com.giftlylists.app",
+        "paths": ["/invite/*"]
+      }
+    ]
+  }
+}
