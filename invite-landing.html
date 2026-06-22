@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Giftly Lists Invite</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body { background: #000; color: #fff; font-family: sans-serif; 
+             display: flex; align-items: center; justify-content: center; 
+             height: 100vh; margin: 0; flex-direction: column; gap: 16px; }
+      a { background: #D90701; color: white; padding: 14px 28px; 
+          border-radius: 12px; text-decoration: none; font-weight: bold; }
+    </style>
+  </head>
+  <body>
+    <h2>You've been invited to a gift list</h2>
+    <p>Open in the Giftly Lists app</p>
+    <a href="giftlylists://invite/INVITE_CODE">Open App</a>
+    <script>
+      // Auto-redirect to app using the path
+      const code = window.location.pathname.split('/invite/')[1];
+      if (code) {
+        document.querySelector('a').href = `giftlylists://invite/${code}`;
+        window.location.href = `giftlylists://invite/${code}`;
+      }
+    </script>
+  </body>
+</html>
