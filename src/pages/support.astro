@@ -1,0 +1,70 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base title="Support — Giftly Lists" description="Get help with Giftly Lists.">
+  <style>
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 24px 40px; border-bottom: 1px solid #1f1f1f; }
+    .logo { font-size: 18px; font-weight: 700; }
+    .back { font-size: 14px; color: #D90701; }
+    .content { max-width: 680px; margin: 0 auto; padding: 80px 40px; }
+    h1 { font-size: 48px; font-weight: 800; letter-spacing: -0.03em; margin-bottom: 16px; }
+    .subtitle { color: #666; font-size: 16px; margin-bottom: 64px; }
+    h2 { font-size: 20px; font-weight: 700; margin-bottom: 12px; margin-top: 48px; }
+    p { color: #888; font-size: 15px; line-height: 1.7; }
+    .faq { margin-top: 16px; display: flex; flex-direction: column; gap: 32px; }
+    .faq-item { border-bottom: 1px solid #1f1f1f; padding-bottom: 32px; }
+    .faq-item h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; }
+    .faq-item p { font-size: 14px; color: #666; line-height: 1.7; }
+    .contact { margin-top: 64px; background: #111; border: 1px solid #1f1f1f; border-radius: 16px; padding: 40px; }
+    .contact h2 { margin-top: 0; }
+    .contact a { color: #D90701; }
+    @media (max-width: 600px) {
+      nav { padding: 20px 24px; }
+      .content { padding: 48px 24px; }
+      h1 { font-size: 36px; }
+    }
+  </style>
+
+  <nav>
+    <span class="logo">🎁 Giftly Lists</span>
+    <a href="/" class="back">← Back</a>
+  </nav>
+
+  <div class="content">
+    <h1>Support</h1>
+    <p class="subtitle">We're here to help. Find answers below or reach out directly.</p>
+
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq">
+      <div class="faq-item">
+        <h3>How do I share a gift list?</h3>
+        <p>Open a list and tap the Share button. You'll get a unique invite link you can send via text, email, or any messaging app. Anyone with the link can join the list.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do gift reservations work?</h3>
+        <p>Members of a list can tap any item to mark it as reserved. The item will show as taken to other members so there are no duplicate gifts. The list owner cannot see who reserved what.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What's the difference between Free and Pro?</h3>
+        <p>Free accounts can create up to 3 gift lists. Pro accounts ($1.99/month) can create up to 25 lists and have ads removed.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do I cancel my Pro subscription?</h3>
+        <p>Go to your iPhone Settings → Apple ID → Subscriptions → Giftly Lists Pro → Cancel Subscription. Your Pro access continues until the end of the billing period.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do I restore my purchase?</h3>
+        <p>Open the app, go to the upgrade screen, and tap "Restore purchases" at the bottom.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can I delete a list?</h3>
+        <p>Yes — swipe left on any list you own and tap Delete. This permanently removes the list and all its items.</p>
+      </div>
+    </div>
+
+    <div class="contact">
+      <h2>Still need help?</h2>
+      <p>Email us at <a href="mailto:support@giftlylists.com">support@giftlylists.com</a> and we'll get back to you as soon as possible.</p>
+    </div>
+  </div>
+</Base>

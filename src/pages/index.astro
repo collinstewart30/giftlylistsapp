@@ -1,0 +1,127 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base title="Giftly Lists — Share Gift Lists">
+  <style>
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 24px 40px; border-bottom: 1px solid #1f1f1f; }
+    .logo { font-size: 18px; font-weight: 700; color: #fff; }
+    .nav-links { display: flex; gap: 24px; align-items: center; }
+    .nav-links a { color: #888; font-size: 14px; transition: color 0.2s; }
+    .nav-links a:hover { color: #fff; }
+    .hero { max-width: 720px; margin: 0 auto; padding: 100px 40px 80px; text-align: center; }
+    .eyebrow { font-size: 12px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: #D90701; margin-bottom: 24px; }
+    h1 { font-size: clamp(40px, 8vw, 72px); font-weight: 800; line-height: 1.05; letter-spacing: -0.03em; margin-bottom: 24px; }
+    h1 span { color: #D90701; }
+    .subtitle { font-size: 18px; color: #888; line-height: 1.6; max-width: 500px; margin: 0 auto 48px; }
+    .cta-group { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .btn-primary { background: #D90701; color: #fff; padding: 16px 32px; border-radius: 12px; font-weight: 600; font-size: 16px; transition: opacity 0.2s; }
+    .btn-primary:hover { opacity: 0.85; }
+    .btn-secondary { background: #1a1a1a; color: #fff; padding: 16px 32px; border-radius: 12px; font-weight: 600; font-size: 16px; border: 1px solid #333; transition: border-color 0.2s; }
+    .btn-secondary:hover { border-color: #666; }
+    .features { max-width: 960px; margin: 0 auto; padding: 80px 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
+    .feature { background: #111; border: 1px solid #1f1f1f; border-radius: 16px; padding: 32px; }
+    .feature-icon { font-size: 28px; margin-bottom: 16px; }
+    .feature h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; }
+    .feature p { font-size: 14px; color: #666; line-height: 1.6; }
+    .pricing { max-width: 720px; margin: 0 auto; padding: 80px 40px; text-align: center; }
+    .pricing h2 { font-size: 36px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 48px; }
+    .plans { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; text-align: left; }
+    .plan { background: #111; border: 1px solid #1f1f1f; border-radius: 16px; padding: 32px; }
+    .plan.pro { border-color: #D90701; }
+    .plan-name { font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #888; margin-bottom: 8px; }
+    .plan.pro .plan-name { color: #D90701; }
+    .plan-price { font-size: 36px; font-weight: 800; margin-bottom: 4px; }
+    .plan-price span { font-size: 16px; font-weight: 400; color: #666; }
+    .plan-features { margin-top: 24px; display: flex; flex-direction: column; gap: 10px; }
+    .plan-features li { font-size: 14px; color: #888; list-style: none; display: flex; gap: 8px; }
+    .plan-features li::before { content: "✓"; color: #D90701; font-weight: 700; }
+    footer { border-top: 1px solid #1f1f1f; padding: 40px; text-align: center; }
+    footer p { font-size: 13px; color: #444; }
+    footer a { color: #666; margin: 0 12px; }
+    footer a:hover { color: #fff; }
+    @media (max-width: 600px) {
+      nav { padding: 20px 24px; }
+      .hero { padding: 60px 24px; }
+      .features { padding: 40px 24px; }
+      .pricing { padding: 40px 24px; }
+      .plans { grid-template-columns: 1fr; }
+      footer { padding: 32px 24px; }
+    }
+  </style>
+
+  <nav>
+    <span class="logo">🎁 Giftly Lists</span>
+    <div class="nav-links">
+      <a href="/support">Support</a>
+      <a href="/privacy">Privacy</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <p class="eyebrow">Now available on iOS</p>
+    <h1>Gift lists made for <span>sharing</span></h1>
+    <p class="subtitle">Create wishlists, share them with friends and family, and let everyone reserve gifts without spoiling the surprise.</p>
+    <div class="cta-group">
+      <a href="https://apps.apple.com/app/giftlylists" class="btn-primary">Download on App Store</a>
+      <a href="/support" class="btn-secondary">Learn more</a>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="feature">
+      <div class="feature-icon">📋</div>
+      <h3>Create lists instantly</h3>
+      <p>Set up a gift list in seconds. Name it, share it, and let the gifting begin.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">🔗</div>
+      <h3>Share with one link</h3>
+      <p>Send an invite link to anyone. They join with one tap — no account required to view.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">🎄</div>
+      <h3>Reserve gifts secretly</h3>
+      <p>Members can mark items as reserved so there are no duplicate gifts.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">👨‍👩‍👧</div>
+      <h3>Built for families</h3>
+      <p>Share lists across the whole family. Everyone stays in the loop without the chaos.</p>
+    </div>
+  </section>
+
+  <section class="pricing">
+    <h2>Simple pricing</h2>
+    <div class="plans">
+      <div class="plan">
+        <p class="plan-name">Free</p>
+        <p class="plan-price">$0 <span>/ forever</span></p>
+        <ul class="plan-features">
+          <li>Up to 3 gift lists</li>
+          <li>Unlimited items per list</li>
+          <li>Share with anyone</li>
+          <li>Gift reservations</li>
+        </ul>
+      </div>
+      <div class="plan pro">
+        <p class="plan-name">Pro</p>
+        <p class="plan-price">$1.99 <span>/ month</span></p>
+        <ul class="plan-features">
+          <li>Up to 25 gift lists</li>
+          <li>Unlimited items per list</li>
+          <li>Share with anyone</li>
+          <li>Gift reservations</li>
+          <li>No ads</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>
+      <a href="/support">Support</a>
+      <a href="/privacy">Privacy Policy</a>
+    </p>
+    <p style="margin-top: 16px;">© 2026 Giftly Lists. All rights reserved.</p>
+  </footer>
+</Base>

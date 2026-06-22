@@ -1,0 +1,68 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base title="Privacy Policy — Giftly Lists" description="Giftly Lists privacy policy.">
+  <style>
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 24px 40px; border-bottom: 1px solid #1f1f1f; }
+    .logo { font-size: 18px; font-weight: 700; }
+    .back { font-size: 14px; color: #D90701; }
+    .content { max-width: 680px; margin: 0 auto; padding: 80px 40px; }
+    h1 { font-size: 48px; font-weight: 800; letter-spacing: -0.03em; margin-bottom: 16px; }
+    .updated { color: #444; font-size: 13px; margin-bottom: 64px; }
+    h2 { font-size: 20px; font-weight: 700; margin-top: 48px; margin-bottom: 12px; }
+    p { color: #888; font-size: 15px; line-height: 1.7; margin-bottom: 16px; }
+    ul { color: #888; font-size: 15px; line-height: 1.7; padding-left: 24px; margin-bottom: 16px; }
+    li { margin-bottom: 8px; }
+    a { color: #D90701; }
+    @media (max-width: 600px) {
+      nav { padding: 20px 24px; }
+      .content { padding: 48px 24px; }
+      h1 { font-size: 36px; }
+    }
+  </style>
+
+  <nav>
+    <span class="logo">🎁 Giftly Lists</span>
+    <a href="/" class="back">← Back</a>
+  </nav>
+
+  <div class="content">
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated: June 2026</p>
+
+    <p>Giftly Lists ("we", "our", or "us") is committed to protecting your privacy. This policy explains what information we collect, how we use it, and your choices.</p>
+
+    <h2>Information We Collect</h2>
+    <ul>
+      <li><strong>Account information:</strong> When you sign in with Google, we receive your name and email address.</li>
+      <li><strong>List data:</strong> The gift lists, items, and invite codes you create are stored in our database.</li>
+      <li><strong>Usage data:</strong> We collect basic analytics to understand how the app is used.</li>
+      <li><strong>Advertising ID:</strong> With your permission, we use your device's advertising identifier to show relevant ads to free users.</li>
+    </ul>
+
+    <h2>How We Use Your Information</h2>
+    <ul>
+      <li>To provide and maintain the Giftly Lists service</li>
+      <li>To sync your lists across sessions</li>
+      <li>To process Pro subscription payments via Apple</li>
+      <li>To show ads to free users via Google AdMob</li>
+    </ul>
+
+    <h2>Third-Party Services</h2>
+    <p>We use the following third-party services:</p>
+    <ul>
+      <li><strong>Firebase (Google):</strong> Authentication and database storage</li>
+      <li><strong>RevenueCat:</strong> Subscription management</li>
+      <li><strong>Google AdMob:</strong> Advertising for free users</li>
+    </ul>
+
+    <h2>Data Retention</h2>
+    <p>Your account and list data is retained as long as your account is active. You can delete your lists at any time within the app. To request full account deletion, email us at <a href="mailto:support@giftlylists.com">support@giftlylists.com</a>.</p>
+
+    <h2>Children's Privacy</h2>
+    <p>Giftly Lists is not directed at children under 13. We do not knowingly collect personal information from children under 13.</p>
+
+    <h2>Contact Us</h2>
+    <p>If you have questions about this privacy policy, email us at <a href="mailto:support@giftlylists.com">support@giftlylists.com</a>.</p>
+  </div>
+</Base>
