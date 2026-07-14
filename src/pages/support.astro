@@ -1,70 +1,270 @@
 ---
-import Base from '../layouts/Base.astro';
+import Base from "../layouts/Base.astro";
 ---
-<Base title="Support — Giftly Lists" description="Get help with Giftly Lists.">
-  <style>
-    nav { display: flex; justify-content: space-between; align-items: center; padding: 24px 40px; border-bottom: 1px solid #1f1f1f; }
-    .logo { font-size: 18px; font-weight: 700; }
-    .back { font-size: 14px; color: #D90701; }
-    .content { max-width: 680px; margin: 0 auto; padding: 80px 40px; }
-    h1 { font-size: 48px; font-weight: 800; letter-spacing: -0.03em; margin-bottom: 16px; }
-    .subtitle { color: #666; font-size: 16px; margin-bottom: 64px; }
-    h2 { font-size: 20px; font-weight: 700; margin-bottom: 12px; margin-top: 48px; }
-    p { color: #888; font-size: 15px; line-height: 1.7; }
-    .faq { margin-top: 16px; display: flex; flex-direction: column; gap: 32px; }
-    .faq-item { border-bottom: 1px solid #1f1f1f; padding-bottom: 32px; }
-    .faq-item h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; }
-    .faq-item p { font-size: 14px; color: #666; line-height: 1.7; }
-    .contact { margin-top: 64px; background: #111; border: 1px solid #1f1f1f; border-radius: 16px; padding: 40px; }
-    .contact h2 { margin-top: 0; }
-    .contact a { color: #D90701; }
-    @media (max-width: 600px) {
-      nav { padding: 20px 24px; }
-      .content { padding: 48px 24px; }
-      h1 { font-size: 36px; }
-    }
-  </style>
 
-  <nav>
-    <span class="logo">🎁 Giftly Lists</span>
-    <a href="/" class="back">← Back</a>
-  </nav>
-
-  <div class="content">
-    <h1>Support</h1>
-    <p class="subtitle">We're here to help. Find answers below or reach out directly.</p>
-
-    <h2>Frequently Asked Questions</h2>
-    <div class="faq">
-      <div class="faq-item">
-        <h3>How do I share a gift list?</h3>
-        <p>Open a list and tap the Share button. You'll get a unique invite link you can send via text, email, or any messaging app. Anyone with the link can join the list.</p>
-      </div>
-      <div class="faq-item">
-        <h3>How do gift reservations work?</h3>
-        <p>Members of a list can tap any item to mark it as reserved. The item will show as taken to other members so there are no duplicate gifts. The list owner cannot see who reserved what.</p>
-      </div>
-      <div class="faq-item">
-        <h3>What's the difference between Free and Pro?</h3>
-        <p>Free accounts can create up to 3 gift lists. Pro accounts ($1.99/month) can create up to 25 lists and have ads removed.</p>
-      </div>
-      <div class="faq-item">
-        <h3>How do I cancel my Pro subscription?</h3>
-        <p>Go to your iPhone Settings → Apple ID → Subscriptions → Giftly Lists Pro → Cancel Subscription. Your Pro access continues until the end of the billing period.</p>
-      </div>
-      <div class="faq-item">
-        <h3>How do I restore my purchase?</h3>
-        <p>Open the app, go to the upgrade screen, and tap "Restore purchases" at the bottom.</p>
-      </div>
-      <div class="faq-item">
-        <h3>Can I delete a list?</h3>
-        <p>Yes — swipe left on any list you own and tap Delete. This permanently removes the list and all its items.</p>
+<Base
+  title="Support — Giftly Lists"
+  description="Get help with Giftly Lists. Find answers to common questions or reach out to our support team."
+>
+  <!-- Page Header -->
+  <section class="relative pt-32 pb-12 sm:pt-40 sm:pb-16">
+    <div class="absolute inset-0" aria-hidden="true">
+      <div
+        class="absolute top-0 left-1/4 w-[600px] h-[600px] bg-[#D90701]/[0.02] rounded-full blur-[120px]"
+      >
       </div>
     </div>
 
-    <div class="contact">
-      <h2>Still need help?</h2>
-      <p>Email us at <a href="mailto:support@giftlylists.com">support@giftlylists.com</a> and we'll get back to you as soon as possible.</p>
+    <div class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Back Link -->
+      <a
+        href="/"
+        class="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-[#D90701] transition-colors duration-200 mb-8 group"
+      >
+        <svg
+          class="w-4 h-4 transition-transform duration-200 group-hover:-translate-x-1"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          aria-hidden="true"
+        >
+          <path d="M19 12H5M12 19l-7-7 7-7"></path>
+        </svg>
+        Back to home
+      </a>
+
+      <!-- Title -->
+      <h1 class="text-4xl sm:text-5xl font-bold tracking-tight text-white mb-4">
+        Support
+      </h1>
+      <p class="text-lg text-gray-500">
+        We're here to help. Find answers below or reach out directly.
+      </p>
     </div>
-  </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="relative pb-24 sm:pb-32">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Section Header -->
+      <div class="mb-12">
+        <h2 class="text-xl font-semibold text-white mb-2">
+          Frequently Asked Questions
+        </h2>
+        <p class="text-sm text-gray-600">Quick answers to common questions</p>
+      </div>
+
+      <!-- FAQ Items -->
+      <div class="space-y-1 mb-16">
+        {
+          [
+            {
+              question: "How do I share a gift list?",
+              answer:
+                "Open a list and tap the Share button. You'll get a unique invite link you can send via text, email, or any messaging app. Anyone with the link can join the list.",
+            },
+            {
+              question: "How do gift reservations work?",
+              answer:
+                "Members of a list can tap any item to mark it as reserved. The item will show as taken to other members so there are no duplicate gifts. The list owner cannot see who reserved what.",
+            },
+            {
+              question: "What's the difference between Free and Pro?",
+              answer:
+                "Free accounts can create up to 3 gift lists. Pro accounts ($1.99/month) can create up to 25 lists and have ads removed.",
+            },
+            {
+              question: "How do I cancel my Pro subscription?",
+              answer:
+                "Go to your iPhone Settings → Apple ID → Subscriptions → Giftly Lists Pro → Cancel Subscription. Your Pro access continues until the end of the billing period.",
+            },
+            {
+              question: "How do I restore my purchase?",
+              answer:
+                'Open the app, go to the upgrade screen, and tap "Restore purchases" at the bottom.',
+            },
+            {
+              question: "Can I delete a list?",
+              answer:
+                "Yes — swipe left on any list you own and tap Delete. This permanently removes the list and all its items.",
+            },
+          ].map((faq, index) => (
+            <details class="group bg-white/[0.02] border border-white/[0.06] first:rounded-t-2xl last:rounded-b-2xl first-of-type:rounded-t-2xl last-of-type:rounded-b-2xl [&:not(:first-child)]:-mt-px">
+              <summary class="flex items-center justify-between p-6 cursor-pointer list-none hover:bg-white/[0.04] transition-colors duration-200">
+                <h3 class="text-base font-medium text-white pr-4">
+                  {faq.question}
+                </h3>
+                <svg
+                  class="w-5 h-5 text-gray-500 flex-shrink-0 transition-transform duration-200 group-open:rotate-45"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  aria-hidden="true"
+                >
+                  <path d="M12 5v14M5 12h14" />
+                </svg>
+              </summary>
+              <div class="p-6">
+                <p class="text-sm text-gray-400 leading-relaxed">
+                  {faq.answer}
+                </p>
+              </div>
+            </details>
+          ))
+        }
+      </div>
+
+      <!-- Contact Card -->
+      <div
+        class="bg-[#D90701] border border-[#D90701] rounded-2xl p-8 sm:p-10 relative overflow-hidden"
+      >
+        <!-- Decorative background pattern -->
+        <div class="absolute inset-0 opacity-10" aria-hidden="true">
+          <div
+            class="absolute -top-24 -right-24 w-48 h-48 bg-white rounded-full blur-3xl"
+          >
+          </div>
+          <div
+            class="absolute -bottom-24 -left-24 w-48 h-48 bg-black rounded-full blur-3xl"
+          >
+          </div>
+        </div>
+
+        <div class="relative">
+          <div class="flex items-start gap-4 mb-6">
+            <div
+              class="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center flex-shrink-0"
+            >
+              <svg
+                class="w-5 h-5 text-white"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                aria-hidden="true"
+              >
+                <path
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                ></path>
+              </svg>
+            </div>
+            <div>
+              <h2 class="text-xl font-semibold text-white mb-2">
+                Still need help?
+              </h2>
+              <p class="text-white/70 text-sm leading-relaxed">
+                Our support team is ready to assist you. We typically respond
+                within a few hours.
+              </p>
+            </div>
+          </div>
+
+          <a
+            href="mailto:support@giftlylists.com"
+            class="inline-flex items-center gap-2 bg-white hover:bg-gray-100 text-black px-6 py-3 rounded-xl font-medium text-sm transition-all duration-200 active:scale-[0.98] group"
+          >
+            <svg
+              class="w-4 h-4 transition-transform duration-200 group-hover:scale-110"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              aria-hidden="true"
+            >
+              <path
+                d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+              ></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            Email support@giftlylists.com
+            <svg
+              class="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              aria-hidden="true"
+            >
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Additional Help Links -->
+      <div class="mt-8 grid sm:grid-cols-2 gap-4">
+        <a
+          href="/privacy"
+          class="flex items-center gap-4 p-5 bg-white/[0.02] border border-white/[0.06] rounded-xl hover:bg-white/[0.04] hover:border-white/[0.1] transition-all duration-200 group"
+        >
+          <div
+            class="w-10 h-10 bg-white/[0.03] border border-white/[0.06] rounded-xl flex items-center justify-center flex-shrink-0 group-hover:border-[#D90701]/20 group-hover:bg-[#D90701]/[0.03] transition-all duration-300"
+          >
+            <svg
+              class="w-5 h-5 text-gray-400"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              aria-hidden="true"
+            >
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-sm font-medium text-white mb-1">Privacy Policy</h3>
+            <p class="text-xs text-gray-500">Learn how we protect your data</p>
+          </div>
+          <svg
+            class="w-4 h-4 text-gray-600 ml-auto group-hover:text-[#D90701] transition-colors duration-200"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            aria-hidden="true"
+          >
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </a>
+
+        <a
+          href="/"
+          class="flex items-center gap-4 p-5 bg-white/[0.02] border border-white/[0.06] rounded-xl hover:bg-white/[0.04] hover:border-white/[0.1] transition-all duration-200 group"
+        >
+          <div
+            class="w-10 h-10 bg-white/[0.03] border border-white/[0.06] rounded-xl flex items-center justify-center flex-shrink-0 group-hover:border-[#D90701]/20 group-hover:bg-[#D90701]/[0.03] transition-all duration-300"
+          >
+            <svg
+              class="w-5 h-5 text-gray-400"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              aria-hidden="true"
+            >
+              <path
+                d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+              ></path>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-sm font-medium text-white mb-1">Back to Home</h3>
+            <p class="text-xs text-gray-500">Return to the main page</p>
+          </div>
+          <svg
+            class="w-4 h-4 text-gray-600 ml-auto group-hover:text-[#D90701] transition-colors duration-200"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            aria-hidden="true"
+          >
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
 </Base>

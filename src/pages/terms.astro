@@ -4,185 +4,249 @@ import Base from "../layouts/Base.astro";
 
 <Base
   title="Terms of Use — Giftly Lists"
-  description="Giftly Lists terms of use."
+  description="Giftly Lists terms of use — guidelines for using our gift list sharing app."
 >
-  <style>
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 24px 40px;
-      border-bottom: 1px solid #1f1f1f;
-    }
-    .logo {
-      font-size: 18px;
-      font-weight: 700;
-    }
-    .back {
-      font-size: 14px;
-      color: #d90701;
-    }
-    .content {
-      max-width: 680px;
-      margin: 0 auto;
-      padding: 80px 40px;
-    }
-    h1 {
-      font-size: 48px;
-      font-weight: 800;
-      letter-spacing: -0.03em;
-      margin-bottom: 16px;
-    }
-    .updated {
-      color: #444;
-      font-size: 13px;
-      margin-bottom: 64px;
-    }
-    h2 {
-      font-size: 20px;
-      font-weight: 700;
-      margin-top: 48px;
-      margin-bottom: 12px;
-    }
-    p {
-      color: #888;
-      font-size: 15px;
-      line-height: 1.7;
-      margin-bottom: 16px;
-    }
-    ul {
-      color: #888;
-      font-size: 15px;
-      line-height: 1.7;
-      padding-left: 24px;
-      margin-bottom: 16px;
-    }
-    li {
-      margin-bottom: 8px;
-    }
-    a {
-      color: #d90701;
-    }
-    @media (max-width: 600px) {
-      nav {
-        padding: 20px 24px;
-      }
-      .content {
-        padding: 48px 24px;
-      }
-      h1 {
-        font-size: 36px;
-      }
-    }
-  </style>
+  <!-- Page Header -->
+  <section class="relative pt-32 pb-12 sm:pt-40 sm:pb-16">
+    <div class="absolute inset-0" aria-hidden="true">
+      <div
+        class="absolute top-0 left-1/4 w-[600px] h-[600px] bg-[#D90701]/[0.02] rounded-full blur-[120px]"
+      >
+      </div>
+    </div>
 
-  <nav>
-    <span class="logo">🎁 Giftly Lists</span>
-    <a href="/" class="back">← Back</a>
-  </nav>
+    <div class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Back Link -->
+      <a
+        href="/"
+        class="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-[#D90701] transition-colors duration-200 mb-8 group"
+      >
+        <svg
+          class="w-4 h-4 transition-transform duration-200 group-hover:-translate-x-1"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          aria-hidden="true"
+        >
+          <path d="M19 12H5M12 19l-7-7 7-7"></path>
+        </svg>
+        Back to home
+      </a>
 
-  <div class="content">
-    <h1>Terms of Use</h1>
-    <p class="updated">Last updated: June 2026</p>
+      <!-- Title -->
+      <h1 class="text-4xl sm:text-5xl font-bold tracking-tight text-white mb-4">
+        Terms of Use
+      </h1>
+      <p class="text-sm text-gray-600">Last updated: June 2026</p>
+    </div>
+  </section>
 
-    <p>
-      These Terms of Use govern your use of the Giftly Lists mobile application
-      ("App") operated by Red Surge Technology ("we", "our", or "us"). By
-      downloading or using the App, you agree to these terms.
-    </p>
+  <!-- Content -->
+  <section class="relative pb-24 sm:pb-32">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="prose prose-invert prose-lg max-w-none">
+        <!-- Introduction -->
+        <p class="text-gray-400 leading-relaxed mb-8">
+          These Terms of Use govern your use of the Giftly Lists mobile
+          application ("App") operated by Red Surge Technology ("we", "our", or
+          "us"). By downloading or using the App, you agree to these terms.
+        </p>
 
-    <h2>Use of the App</h2>
-    <p>
-      Giftly Lists is a gift wishlist sharing app. You may use the App to create
-      gift lists, add items, and share lists with others. You are responsible
-      for all activity that occurs under your account.
-    </p>
-    <ul>
-      <li>You must be at least 13 years old to use the App.</li>
-      <li>You may not use the App for any unlawful purpose.</li>
-      <li>
-        You may not attempt to gain unauthorized access to any part of the App
-        or its infrastructure.
-      </li>
-    </ul>
+        <!-- Section 1 -->
+        <div class="mb-12">
+          <h2 class="text-xl font-semibold text-white mb-4">Use of the App</h2>
+          <p class="text-gray-400 leading-relaxed mb-4">
+            Giftly Lists is a gift wishlist sharing app. You may use the App to
+            create gift lists, add items, and share lists with others. You are
+            responsible for all activity that occurs under your account.
+          </p>
+          <ul class="space-y-3 list-none">
+            <li class="flex gap-3 text-gray-400">
+              <span class="text-[#D90701] mt-1 flex-shrink-0">•</span>
+              <span>You must be at least 13 years old to use the App.</span>
+            </li>
+            <li class="flex gap-3 text-gray-400">
+              <span class="text-[#D90701] mt-1 flex-shrink-0">•</span>
+              <span>You may not use the App for any unlawful purpose.</span>
+            </li>
+            <li class="flex gap-3 text-gray-400">
+              <span class="text-[#D90701] mt-1 flex-shrink-0">•</span>
+              <span
+                >You may not attempt to gain unauthorized access to any part of
+                the App or its infrastructure.</span
+              >
+            </li>
+          </ul>
+        </div>
 
-    <h2>Accounts</h2>
-    <p>
-      You may sign in using Google or Apple. You are responsible for maintaining
-      the security of your account. We are not liable for any loss resulting
-      from unauthorized use of your account.
-    </p>
+        <!-- Section 2 -->
+        <div class="mb-12">
+          <h2 class="text-xl font-semibold text-white mb-4">Accounts</h2>
+          <p class="text-gray-400 leading-relaxed">
+            You may sign in using Google or Apple. You are responsible for
+            maintaining the security of your account. We are not liable for any
+            loss resulting from unauthorized use of your account.
+          </p>
+        </div>
 
-    <h2>Subscriptions</h2>
-    <p>
-      Giftly Lists offers an optional auto-renewable subscription called <strong
-        >Giftly Pro</strong
-      > at <strong>$1.99/month</strong>. Giftly Pro unlocks up to 25 gift lists
-      and removes ads.
-    </p>
-    <ul>
-      <li>
-        Payment is charged to your Apple ID account at confirmation of purchase.
-      </li>
-      <li>
-        Subscriptions automatically renew monthly unless cancelled at least 24
-        hours before the end of the current period.
-      </li>
-      <li>
-        You can manage or cancel your subscription at any time in your device's
-        App Store settings.
-      </li>
-      <li>No refunds are provided for partial subscription periods.</li>
-    </ul>
-    <p>
-      By subscribing, you also agree to Apple's standard <a
-        href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
-        target="_blank"
-        >Licensed Application End User License Agreement (EULA)</a
-      >.
-    </p>
+        <!-- Section 3 -->
+        <div class="mb-12">
+          <h2 class="text-xl font-semibold text-white mb-4">Subscriptions</h2>
+          <p class="text-gray-400 leading-relaxed mb-4">
+            Giftly Lists offers an optional auto-renewable subscription called{
+              " "
+            }
+            <strong class="text-gray-300">Giftly Pro</strong> at{" "}
+            <strong class="text-gray-300">$1.99/month</strong>. Giftly Pro
+            unlocks up to 25 gift lists and removes ads.
+          </p>
+          <ul class="space-y-3 list-none mb-4">
+            <li class="flex gap-3 text-gray-400">
+              <span class="text-[#D90701] mt-1 flex-shrink-0">•</span>
+              <span
+                >Payment is charged to your Apple ID account at confirmation of
+                purchase.</span
+              >
+            </li>
+            <li class="flex gap-3 text-gray-400">
+              <span class="text-[#D90701] mt-1 flex-shrink-0">•</span>
+              <span
+                >Subscriptions automatically renew monthly unless cancelled at
+                least 24 hours before the end of the current period.</span
+              >
+            </li>
+            <li class="flex gap-3 text-gray-400">
+              <span class="text-[#D90701] mt-1 flex-shrink-0">•</span>
+              <span
+                >You can manage or cancel your subscription at any time in your
+                device's App Store settings.</span
+              >
+            </li>
+            <li class="flex gap-3 text-gray-400">
+              <span class="text-[#D90701] mt-1 flex-shrink-0">•</span>
+              <span
+                >No refunds are provided for partial subscription periods.</span
+              >
+            </li>
+          </ul>
+          <p class="text-gray-400 leading-relaxed">
+            By subscribing, you also agree to Apple's standard{" "}
+            <a
+              href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-[#D90701] hover:text-[#BF0600] underline underline-offset-4 transition-colors duration-200"
+            >
+              Licensed Application End User License Agreement (EULA)
+            </a>.
+          </p>
+        </div>
 
-    <h2>User Content</h2>
-    <p>
-      You retain ownership of the content you create in the App (list titles,
-      item names, links). By using the App, you grant us a limited license to
-      store and display your content solely for the purpose of providing the
-      service.
-    </p>
+        <!-- Section 4 -->
+        <div class="mb-12">
+          <h2 class="text-xl font-semibold text-white mb-4">User Content</h2>
+          <p class="text-gray-400 leading-relaxed">
+            You retain ownership of the content you create in the App (list
+            titles, item names, links). By using the App, you grant us a limited
+            license to store and display your content solely for the purpose of
+            providing the service.
+          </p>
+        </div>
 
-    <h2>Termination</h2>
-    <p>
-      We reserve the right to suspend or terminate your account if you violate
-      these terms. You may delete your account at any time by emailing <a
-        href="mailto:support@giftlylists.com">support@giftlylists.com</a
-      >.
-    </p>
+        <!-- Section 5 -->
+        <div class="mb-12">
+          <h2 class="text-xl font-semibold text-white mb-4">Termination</h2>
+          <p class="text-gray-400 leading-relaxed">
+            We reserve the right to suspend or terminate your account if you
+            violate these terms. You may delete your account at any time by
+            emailing{" "}
+            <a
+              href="mailto:support@giftlylists.com"
+              class="text-[#D90701] hover:text-[#BF0600] underline underline-offset-4 transition-colors duration-200"
+            >
+              support@giftlylists.com
+            </a>.
+          </p>
+        </div>
 
-    <h2>Disclaimer of Warranties</h2>
-    <p>
-      The App is provided "as is" without warranties of any kind. We do not
-      guarantee that the App will be uninterrupted, error-free, or free of
-      viruses or other harmful components.
-    </p>
+        <!-- Section 6 -->
+        <div class="mb-12">
+          <h2 class="text-xl font-semibold text-white mb-4">
+            Disclaimer of Warranties
+          </h2>
+          <p class="text-gray-400 leading-relaxed">
+            The App is provided "as is" without warranties of any kind. We do
+            not guarantee that the App will be uninterrupted, error-free, or
+            free of viruses or other harmful components.
+          </p>
+        </div>
 
-    <h2>Limitation of Liability</h2>
-    <p>
-      To the fullest extent permitted by law, Red Surge Technology shall not be
-      liable for any indirect, incidental, special, or consequential damages
-      arising out of your use of the App.
-    </p>
+        <!-- Section 7 -->
+        <div class="mb-12">
+          <h2 class="text-xl font-semibold text-white mb-4">
+            Limitation of Liability
+          </h2>
+          <p class="text-gray-400 leading-relaxed">
+            To the fullest extent permitted by law, Red Surge Technology shall
+            not be liable for any indirect, incidental, special, or
+            consequential damages arising out of your use of the App.
+          </p>
+        </div>
 
-    <h2>Changes to These Terms</h2>
-    <p>
-      We may update these terms from time to time. Continued use of the App
-      after changes constitutes acceptance of the new terms.
-    </p>
+        <!-- Section 8 -->
+        <div class="mb-12">
+          <h2 class="text-xl font-semibold text-white mb-4">
+            Changes to These Terms
+          </h2>
+          <p class="text-gray-400 leading-relaxed">
+            We may update these terms from time to time. Continued use of the
+            App after changes constitutes acceptance of the new terms.
+          </p>
+        </div>
 
-    <h2>Contact Us</h2>
-    <p>
-      If you have questions about these terms, email us at <a
-        href="mailto:support@giftlylists.com">support@giftlylists.com</a
-      >.
-    </p>
-  </div>
+        <!-- Section 9 -->
+        <div class="mb-12">
+          <h2 class="text-xl font-semibold text-white mb-4">Contact Us</h2>
+          <p class="text-gray-400 leading-relaxed">
+            If you have questions about these terms, email us at{" "}
+            <a
+              href="mailto:support@giftlylists.com"
+              class="text-[#D90701] hover:text-[#BF0600] underline underline-offset-4 transition-colors duration-200"
+            >
+              support@giftlylists.com
+            </a>.
+          </p>
+        </div>
+      </div>
+
+      <!-- Footer Card -->
+      <div
+        class="mt-16 p-6 bg-white/[0.02] border border-white/[0.06] rounded-2xl"
+      >
+        <div
+          class="flex flex-col sm:flex-row items-center justify-between gap-4"
+        >
+          <p class="text-sm text-gray-500 text-center sm:text-left">
+            Have questions about our terms? We're here to clarify.
+          </p>
+          <div class="flex items-center gap-3">
+            <a
+              href="/privacy"
+              class="text-sm text-gray-400 hover:text-[#D90701] transition-colors duration-200"
+            >
+              Privacy Policy
+            </a>
+            <span class="text-gray-700" aria-hidden="true">•</span>
+            <a
+              href="/support"
+              class="text-sm text-gray-400 hover:text-[#D90701] transition-colors duration-200"
+            >
+              Support
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </Base>

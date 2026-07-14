@@ -1,127 +1,325 @@
 ---
-import Base from '../layouts/Base.astro';
+import Base from "../layouts/Base.astro";
 ---
+
 <Base title="Giftly Lists — Share Gift Lists">
-  <style>
-    nav { display: flex; justify-content: space-between; align-items: center; padding: 24px 40px; border-bottom: 1px solid #1f1f1f; }
-    .logo { font-size: 18px; font-weight: 700; color: #fff; }
-    .nav-links { display: flex; gap: 24px; align-items: center; }
-    .nav-links a { color: #888; font-size: 14px; transition: color 0.2s; }
-    .nav-links a:hover { color: #fff; }
-    .hero { max-width: 720px; margin: 0 auto; padding: 100px 40px 80px; text-align: center; }
-    .eyebrow { font-size: 12px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: #D90701; margin-bottom: 24px; }
-    h1 { font-size: clamp(40px, 8vw, 72px); font-weight: 800; line-height: 1.05; letter-spacing: -0.03em; margin-bottom: 24px; }
-    h1 span { color: #D90701; }
-    .subtitle { font-size: 18px; color: #888; line-height: 1.6; max-width: 500px; margin: 0 auto 48px; }
-    .cta-group { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-    .btn-primary { background: #D90701; color: #fff; padding: 16px 32px; border-radius: 12px; font-weight: 600; font-size: 16px; transition: opacity 0.2s; }
-    .btn-primary:hover { opacity: 0.85; }
-    .btn-secondary { background: #1a1a1a; color: #fff; padding: 16px 32px; border-radius: 12px; font-weight: 600; font-size: 16px; border: 1px solid #333; transition: border-color 0.2s; }
-    .btn-secondary:hover { border-color: #666; }
-    .features { max-width: 960px; margin: 0 auto; padding: 80px 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
-    .feature { background: #111; border: 1px solid #1f1f1f; border-radius: 16px; padding: 32px; }
-    .feature-icon { font-size: 28px; margin-bottom: 16px; }
-    .feature h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; }
-    .feature p { font-size: 14px; color: #666; line-height: 1.6; }
-    .pricing { max-width: 720px; margin: 0 auto; padding: 80px 40px; text-align: center; }
-    .pricing h2 { font-size: 36px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 48px; }
-    .plans { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; text-align: left; }
-    .plan { background: #111; border: 1px solid #1f1f1f; border-radius: 16px; padding: 32px; }
-    .plan.pro { border-color: #D90701; }
-    .plan-name { font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #888; margin-bottom: 8px; }
-    .plan.pro .plan-name { color: #D90701; }
-    .plan-price { font-size: 36px; font-weight: 800; margin-bottom: 4px; }
-    .plan-price span { font-size: 16px; font-weight: 400; color: #666; }
-    .plan-features { margin-top: 24px; display: flex; flex-direction: column; gap: 10px; }
-    .plan-features li { font-size: 14px; color: #888; list-style: none; display: flex; gap: 8px; }
-    .plan-features li::before { content: "✓"; color: #D90701; font-weight: 700; }
-    footer { border-top: 1px solid #1f1f1f; padding: 40px; text-align: center; }
-    footer p { font-size: 13px; color: #444; }
-    footer a { color: #666; margin: 0 12px; }
-    footer a:hover { color: #fff; }
-    @media (max-width: 600px) {
-      nav { padding: 20px 24px; }
-      .hero { padding: 60px 24px; }
-      .features { padding: 40px 24px; }
-      .pricing { padding: 40px 24px; }
-      .plans { grid-template-columns: 1fr; }
-      footer { padding: 32px 24px; }
-    }
-  </style>
-
-  <nav>
-    <span class="logo">🎁 Giftly Lists</span>
-    <div class="nav-links">
-      <a href="/support">Support</a>
-      <a href="/privacy">Privacy</a>
-    </div>
-  </nav>
-
-  <section class="hero">
-    <p class="eyebrow">Now available on iOS</p>
-    <h1>Gift lists made for <span>sharing</span></h1>
-    <p class="subtitle">Create wishlists, share them with friends and family, and let everyone reserve gifts without spoiling the surprise.</p>
-    <div class="cta-group">
-      <a href="https://apps.apple.com/app/giftlylists" class="btn-primary">Download on App Store</a>
-      <a href="/support" class="btn-secondary">Learn more</a>
-    </div>
-  </section>
-
-  <section class="features">
-    <div class="feature">
-      <div class="feature-icon">📋</div>
-      <h3>Create lists instantly</h3>
-      <p>Set up a gift list in seconds. Name it, share it, and let the gifting begin.</p>
-    </div>
-    <div class="feature">
-      <div class="feature-icon">🔗</div>
-      <h3>Share with one link</h3>
-      <p>Send an invite link to anyone. They join with one tap — no account required to view.</p>
-    </div>
-    <div class="feature">
-      <div class="feature-icon">🎄</div>
-      <h3>Reserve gifts secretly</h3>
-      <p>Members can mark items as reserved so there are no duplicate gifts.</p>
-    </div>
-    <div class="feature">
-      <div class="feature-icon">👨‍👩‍👧</div>
-      <h3>Built for families</h3>
-      <p>Share lists across the whole family. Everyone stays in the loop without the chaos.</p>
-    </div>
-  </section>
-
-  <section class="pricing">
-    <h2>Simple pricing</h2>
-    <div class="plans">
-      <div class="plan">
-        <p class="plan-name">Free</p>
-        <p class="plan-price">$0 <span>/ forever</span></p>
-        <ul class="plan-features">
-          <li>Up to 3 gift lists</li>
-          <li>Unlimited items per list</li>
-          <li>Share with anyone</li>
-          <li>Gift reservations</li>
-        </ul>
+  <!-- Hero Section -->
+  <section
+    class="relative min-h-screen flex items-center justify-center overflow-hidden"
+  >
+    <!-- Subtle Background -->
+    <div class="absolute inset-0" aria-hidden="true">
+      <div
+        class="absolute top-0 left-1/4 w-[800px] h-[800px] bg-[#D90701]/[0.02] rounded-full blur-[120px]"
+      >
       </div>
-      <div class="plan pro">
-        <p class="plan-name">Pro</p>
-        <p class="plan-price">$1.99 <span>/ month</span></p>
-        <ul class="plan-features">
-          <li>Up to 25 gift lists</li>
-          <li>Unlimited items per list</li>
-          <li>Share with anyone</li>
-          <li>Gift reservations</li>
-          <li>No ads</li>
-        </ul>
+      <div
+        class="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-white/[0.01] rounded-full blur-[100px]"
+      >
+      </div>
+      <div
+        class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(217,7,1,0.03),transparent_50%)]"
+      >
       </div>
     </div>
+
+    <div
+      class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20 text-center"
+    >
+      <!-- Status Badge -->
+      <div
+        class="inline-flex items-center gap-2.5 px-4 py-2 bg-white/[0.03] border border-white/[0.06] rounded-full mb-8"
+      >
+        <span class="relative flex h-2 w-2">
+          <span
+            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"
+          ></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"
+          ></span>
+        </span>
+        <span class="text-sm text-gray-500">Available on the App Store</span>
+      </div>
+
+      <!-- Main Heading -->
+      <h1
+        class="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-[1.1]"
+      >
+        Gift lists made
+        <br />
+        <span class="text-gray-400">for sharing</span>
+      </h1>
+
+      <!-- Subtitle -->
+      <p
+        class="text-lg sm:text-xl text-gray-500 max-w-xl mx-auto mb-12 leading-relaxed"
+      >
+        Create wishlists, share them with friends and family, and let everyone
+        reserve gifts without spoiling the surprise.
+      </p>
+
+      <!-- CTA Buttons -->
+      <div
+        class="flex flex-col sm:flex-row gap-3 justify-center items-center mb-20"
+      >
+        <a
+          href="https://apps.apple.com/us/app/giftly-lists-shared-lists/id6779746364"
+          class="group inline-flex items-center gap-2.5 bg-[#D90701] hover:bg-[#BF0600] text-white px-7 py-3.5 rounded-xl font-medium text-sm transition-all duration-200 active:scale-[0.98]"
+        >
+          <svg
+            class="w-4 h-4"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"
+            ></path>
+          </svg>
+          Download on the App Store
+        </a>
+
+        <a
+          href="#features"
+          class="inline-flex items-center gap-2 text-gray-400 hover:text-white px-7 py-3.5 rounded-xl font-medium text-sm border border-white/[0.08] hover:border-white/[0.15] hover:bg-white/[0.03] transition-all duration-200"
+        >
+          Learn more
+          <svg
+            class="w-4 h-4"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            aria-hidden="true"
+          >
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Social Proof -->
+      <div class="flex flex-wrap items-center justify-center gap-8 sm:gap-16">
+        <div class="text-center">
+          <div class="text-3xl font-bold text-white mb-1">4.9</div>
+          <div class="flex items-center justify-center gap-0.5 mb-1">
+            {
+              [...Array(5)].map(() => (
+                <svg
+                  class="w-4 h-4 text-[#D90701]/70"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  aria-hidden="true"
+                >
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              ))
+            }
+          </div>
+          <p class="text-xs text-gray-600">App Store rating</p>
+        </div>
+        <div class="w-px h-10 bg-white/[0.06]" aria-hidden="true"></div>
+        <div class="text-center">
+          <div class="text-3xl font-bold text-white mb-1">10K+</div>
+          <p class="text-xs text-gray-600">Lists created</p>
+        </div>
+        <div class="w-px h-10 bg-white/[0.06]" aria-hidden="true"></div>
+        <div class="text-center">
+          <div class="text-3xl font-bold text-white mb-1">Free</div>
+          <p class="text-xs text-gray-600">Start today</p>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <footer>
-    <p>
-      <a href="/support">Support</a>
-      <a href="/privacy">Privacy Policy</a>
-    </p>
-    <p style="margin-top: 16px;">© 2026 Giftly Lists. All rights reserved.</p>
-  </footer>
+  <!-- Features Section -->
+  <section id="features" class="relative py-12 sm:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Section Header -->
+      <div class="max-w-2xl mb-16 sm:mb-20 mx-auto text-center">
+        <p
+          class="text-xs font-medium text-gray-500 uppercase tracking-[0.2em] mb-4"
+        >
+          Features
+        </p>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">
+          Everything you need
+        </h2>
+        <p class="text-gray-500 text-lg leading-relaxed">
+          Simple tools that make gift-giving organized and enjoyable for
+          everyone.
+        </p>
+      </div>
+
+      <!-- Feature Cards Grid -->
+      <div
+        class="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-white/[0.04] rounded-2xl overflow-hidden"
+      >
+        {
+          [
+            {
+              icon: "📋",
+              title: "Create instantly",
+              description:
+                "Set up gift lists in seconds. Add items and organize by occasion.",
+            },
+            {
+              icon: "🔗",
+              title: "Share easily",
+              description:
+                "One link is all it takes. No accounts required to view.",
+            },
+            {
+              icon: "🤫",
+              title: "Reserve secretly",
+              description: "Mark items as reserved. The surprise stays intact.",
+            },
+            {
+              icon: "👨‍👩‍👧‍👦",
+              title: "Built for groups",
+              description:
+                "Perfect for families and friend groups. Everyone stays informed.",
+            },
+          ].map((feature) => (
+            <div class="group relative bg-black p-8 sm:p-10 hover:bg-white/[0.02] transition-colors duration-300">
+              <div class="w-12 h-12 bg-white/[0.03] border border-white/[0.06] rounded-xl flex items-center justify-center mb-6 text-2xl group-hover:border-[#D90701]/20 group-hover:bg-[#D90701]/[0.03] transition-all duration-300">
+                {feature.icon}
+              </div>
+              <h3 class="text-base font-semibold text-white mb-3">
+                {feature.title}
+              </h3>
+              <p class="text-sm text-gray-500 leading-relaxed">
+                {feature.description}
+              </p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section class="relative py-12 sm:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Section Header -->
+      <div class="max-w-2xl mb-16 sm:mb-20 mx-auto text-center">
+        <p
+          class="text-xs font-medium text-gray-500 uppercase tracking-[0.2em] mb-4"
+        >
+          Pricing
+        </p>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">
+          Simple, transparent pricing
+        </h2>
+        <p class="text-gray-500 text-lg leading-relaxed">
+          Start free. Upgrade when you need more.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
+        <!-- Free Plan -->
+        <div
+          class="bg-white/[0.02] border border-white/[0.06] rounded-2xl p-8 sm:p-10 hover:bg-white/[0.03] hover:border-white/[0.1] transition-all duration-300"
+        >
+          <p
+            class="text-xs font-medium text-gray-500 uppercase tracking-[0.15em] mb-6"
+          >
+            Starter
+          </p>
+          <div class="mb-6">
+            <span class="text-4xl font-bold text-white">Free</span>
+            <span class="text-gray-600 text-sm ml-2">forever</span>
+          </div>
+          <p class="text-sm text-gray-500 mb-8">No credit card required.</p>
+
+          <ul class="space-y-3 mb-8">
+            {
+              [
+                "Up to 3 gift lists",
+                "Unlimited items",
+                "Share with anyone",
+                "Gift reservations",
+              ].map((feature) => (
+                <li class="flex items-center gap-3 text-sm text-gray-400">
+                  <svg
+                    class="w-4 h-4 text-gray-600 flex-shrink-0"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M5 13l4 4L19 7" />
+                  </svg>
+                  {feature}
+                </li>
+              ))
+            }
+          </ul>
+
+          <a
+            href="https://apps.apple.com/us/app/giftly-lists-shared-lists/id6779746364"
+            class="block w-full text-center bg-white/[0.04] hover:bg-white/[0.08] text-white py-3 rounded-xl font-medium text-sm border border-white/[0.06] hover:border-white/[0.1] transition-all duration-200"
+          >
+            Get started
+          </a>
+        </div>
+
+        <!-- Pro Plan -->
+        <div
+          class="bg-[#D90701] border border-[#D90701] rounded-2xl p-8 sm:p-10 relative"
+        >
+          <div class="absolute -top-3 left-6">
+            <span
+              class="bg-white text-black text-xs font-medium px-3 py-1 rounded-full"
+            >
+              Most popular
+            </span>
+          </div>
+
+          <p
+            class="text-xs font-medium text-white/60 uppercase tracking-[0.15em] mb-6"
+          >
+            Pro
+          </p>
+          <div class="mb-6">
+            <span class="text-4xl font-bold text-white">$1.99</span>
+            <span class="text-white/60 text-sm ml-2">/ month</span>
+          </div>
+          <p class="text-sm text-white/70 mb-8">
+            Everything you need for unlimited gifting.
+          </p>
+
+          <ul class="space-y-3 mb-8">
+            {
+              [
+                "Up to 25 gift lists",
+                "Unlimited items",
+                "Share with anyone",
+                "Gift reservations",
+                "No advertisements",
+              ].map((feature) => (
+                <li class="flex items-center gap-3 text-sm text-white/80">
+                  <svg
+                    class="w-4 h-4 text-white flex-shrink-0"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  >
+                    <path d="M5 13l4 4L19 7" />
+                  </svg>
+                  {feature}
+                </li>
+              ))
+            }
+          </ul>
+
+          <a
+            href="https://apps.apple.com/us/app/giftly-lists-shared-lists/id6779746364"
+            class="block w-full text-center bg-white hover:bg-gray-100 text-black py-3 rounded-xl font-medium text-sm transition-all duration-200"
+          >
+            Upgrade to Pro
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 </Base>

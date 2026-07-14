@@ -1,2 +1,6 @@
 import { defineConfig } from 'astro/config';
-export default defineConfig({ output: 'static' });
+import tailwind from '@astrojs/tailwind';
+export default defineConfig({
+  output: 'static',
+  integrations: [tailwind()]
+});

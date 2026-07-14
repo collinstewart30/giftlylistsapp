@@ -1,68 +1,210 @@
 ---
-import Base from '../layouts/Base.astro';
+import Base from "../layouts/Base.astro";
 ---
-<Base title="Privacy Policy — Giftly Lists" description="Giftly Lists privacy policy.">
-  <style>
-    nav { display: flex; justify-content: space-between; align-items: center; padding: 24px 40px; border-bottom: 1px solid #1f1f1f; }
-    .logo { font-size: 18px; font-weight: 700; }
-    .back { font-size: 14px; color: #D90701; }
-    .content { max-width: 680px; margin: 0 auto; padding: 80px 40px; }
-    h1 { font-size: 48px; font-weight: 800; letter-spacing: -0.03em; margin-bottom: 16px; }
-    .updated { color: #444; font-size: 13px; margin-bottom: 64px; }
-    h2 { font-size: 20px; font-weight: 700; margin-top: 48px; margin-bottom: 12px; }
-    p { color: #888; font-size: 15px; line-height: 1.7; margin-bottom: 16px; }
-    ul { color: #888; font-size: 15px; line-height: 1.7; padding-left: 24px; margin-bottom: 16px; }
-    li { margin-bottom: 8px; }
-    a { color: #D90701; }
-    @media (max-width: 600px) {
-      nav { padding: 20px 24px; }
-      .content { padding: 48px 24px; }
-      h1 { font-size: 36px; }
-    }
-  </style>
 
-  <nav>
-    <span class="logo">🎁 Giftly Lists</span>
-    <a href="/" class="back">← Back</a>
-  </nav>
+<Base
+  title="Privacy Policy — Giftly Lists"
+  description="Giftly Lists privacy policy — how we collect, use, and protect your data."
+>
+  <!-- Page Header -->
+  <section class="relative pt-32 pb-12 sm:pt-40 sm:pb-16">
+    <div class="absolute inset-0" aria-hidden="true">
+      <div
+        class="absolute top-0 left-1/4 w-[600px] h-[600px] bg-[#D90701]/[0.02] rounded-full blur-[120px]"
+      >
+      </div>
+    </div>
 
-  <div class="content">
-    <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: June 2026</p>
+    <div class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Back Link -->
+      <a
+        href="/"
+        class="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-[#D90701] transition-colors duration-200 mb-8 group"
+      >
+        <svg
+          class="w-4 h-4 transition-transform duration-200 group-hover:-translate-x-1"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          aria-hidden="true"
+        >
+          <path d="M19 12H5M12 19l-7-7 7-7"></path>
+        </svg>
+        Back to home
+      </a>
 
-    <p>Giftly Lists ("we", "our", or "us") is committed to protecting your privacy. This policy explains what information we collect, how we use it, and your choices.</p>
+      <!-- Title -->
+      <h1 class="text-4xl sm:text-5xl font-bold tracking-tight text-white mb-4">
+        Privacy Policy
+      </h1>
+      <p class="text-sm text-gray-600">Last updated: June 2026</p>
+    </div>
+  </section>
 
-    <h2>Information We Collect</h2>
-    <ul>
-      <li><strong>Account information:</strong> When you sign in with Google, we receive your name and email address.</li>
-      <li><strong>List data:</strong> The gift lists, items, and invite codes you create are stored in our database.</li>
-      <li><strong>Usage data:</strong> We collect basic analytics to understand how the app is used.</li>
-      <li><strong>Advertising ID:</strong> With your permission, we use your device's advertising identifier to show relevant ads to free users.</li>
-    </ul>
+  <!-- Content -->
+  <section class="relative pb-24 sm:pb-32">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="prose prose-invert prose-lg max-w-none">
+        <!-- Introduction -->
+        <p class="text-gray-400 leading-relaxed mb-8">
+          Giftly Lists ("we", "our", or "us") is committed to protecting your
+          privacy. This policy explains what information we collect, how we use
+          it, and your choices.
+        </p>
 
-    <h2>How We Use Your Information</h2>
-    <ul>
-      <li>To provide and maintain the Giftly Lists service</li>
-      <li>To sync your lists across sessions</li>
-      <li>To process Pro subscription payments via Apple</li>
-      <li>To show ads to free users via Google AdMob</li>
-    </ul>
+        <!-- Section 1 -->
+        <div class="mb-12">
+          <h2 class="text-xl font-semibold text-white mb-4">
+            Information We Collect
+          </h2>
+          <ul class="space-y-3 list-none">
+            <li class="flex gap-3 text-gray-400">
+              <span class="text-[#D90701] mt-1 flex-shrink-0">•</span>
+              <span
+                ><strong class="text-gray-300">Account information:</strong> When
+                you sign in with Google, we receive your name and email address.</span
+              >
+            </li>
+            <li class="flex gap-3 text-gray-400">
+              <span class="text-[#D90701] mt-1 flex-shrink-0">•</span>
+              <span
+                ><strong class="text-gray-300">List data:</strong> The gift lists,
+                items, and invite codes you create are stored in our database.</span
+              >
+            </li>
+            <li class="flex gap-3 text-gray-400">
+              <span class="text-[#D90701] mt-1 flex-shrink-0">•</span>
+              <span
+                ><strong class="text-gray-300">Usage data:</strong> We collect basic
+                analytics to understand how the app is used.</span
+              >
+            </li>
+            <li class="flex gap-3 text-gray-400">
+              <span class="text-[#D90701] mt-1 flex-shrink-0">•</span>
+              <span
+                ><strong class="text-gray-300">Advertising ID:</strong> With your
+                permission, we use your device's advertising identifier to show relevant
+                ads to free users.</span
+              >
+            </li>
+          </ul>
+        </div>
 
-    <h2>Third-Party Services</h2>
-    <p>We use the following third-party services:</p>
-    <ul>
-      <li><strong>Firebase (Google):</strong> Authentication and database storage</li>
-      <li><strong>RevenueCat:</strong> Subscription management</li>
-      <li><strong>Google AdMob:</strong> Advertising for free users</li>
-    </ul>
+        <!-- Section 2 -->
+        <div class="mb-12">
+          <h2 class="text-xl font-semibold text-white mb-4">
+            How We Use Your Information
+          </h2>
+          <ul class="space-y-3 list-none">
+            <li class="flex gap-3 text-gray-400">
+              <span class="text-[#D90701] mt-1 flex-shrink-0">•</span>
+              <span>To provide and maintain the Giftly Lists service</span>
+            </li>
+            <li class="flex gap-3 text-gray-400">
+              <span class="text-[#D90701] mt-1 flex-shrink-0">•</span>
+              <span>To sync your lists across sessions</span>
+            </li>
+            <li class="flex gap-3 text-gray-400">
+              <span class="text-[#D90701] mt-1 flex-shrink-0">•</span>
+              <span>To process Pro subscription payments via Apple</span>
+            </li>
+            <li class="flex gap-3 text-gray-400">
+              <span class="text-[#D90701] mt-1 flex-shrink-0">•</span>
+              <span>To show ads to free users via Google AdMob</span>
+            </li>
+          </ul>
+        </div>
 
-    <h2>Data Retention</h2>
-    <p>Your account and list data is retained as long as your account is active. You can delete your lists at any time within the app. To request full account deletion, email us at <a href="mailto:support@giftlylists.com">support@giftlylists.com</a>.</p>
+        <!-- Section 3 -->
+        <div class="mb-12">
+          <h2 class="text-xl font-semibold text-white mb-4">
+            Third-Party Services
+          </h2>
+          <p class="text-gray-400 mb-4">
+            We use the following third-party services:
+          </p>
+          <ul class="space-y-3 list-none">
+            <li class="flex gap-3 text-gray-400">
+              <span class="text-[#D90701] mt-1 flex-shrink-0">•</span>
+              <span
+                ><strong class="text-gray-300">Firebase (Google):</strong> Authentication
+                and database storage</span
+              >
+            </li>
+            <li class="flex gap-3 text-gray-400">
+              <span class="text-[#D90701] mt-1 flex-shrink-0">•</span>
+              <span
+                ><strong class="text-gray-300">RevenueCat:</strong> Subscription
+                management</span
+              >
+            </li>
+            <li class="flex gap-3 text-gray-400">
+              <span class="text-[#D90701] mt-1 flex-shrink-0">•</span>
+              <span
+                ><strong class="text-gray-300">Google AdMob:</strong> Advertising
+                for free users</span
+              >
+            </li>
+          </ul>
+        </div>
 
-    <h2>Children's Privacy</h2>
-    <p>Giftly Lists is not directed at children under 13. We do not knowingly collect personal information from children under 13.</p>
+        <!-- Section 4 -->
+        <div class="mb-12">
+          <h2 class="text-xl font-semibold text-white mb-4">Data Retention</h2>
+          <p class="text-gray-400 leading-relaxed">
+            Your account and list data is retained as long as your account is
+            active. You can delete your lists at any time within the app. To
+            request full account deletion, email us at{" "}
+            <a
+              href="mailto:support@giftlylists.com"
+              class="text-[#D90701] hover:text-[#BF0600] underline underline-offset-4 transition-colors duration-200"
+            >
+              support@giftlylists.com
+            </a>.
+          </p>
+        </div>
 
-    <h2>Contact Us</h2>
-    <p>If you have questions about this privacy policy, email us at <a href="mailto:support@giftlylists.com">support@giftlylists.com</a>.</p>
-  </div>
+        <!-- Section 5 -->
+        <div class="mb-12">
+          <h2 class="text-xl font-semibold text-white mb-4">
+            Children's Privacy
+          </h2>
+          <p class="text-gray-400 leading-relaxed">
+            Giftly Lists is not directed at children under 13. We do not
+            knowingly collect personal information from children under 13.
+          </p>
+        </div>
+
+        <!-- Section 6 -->
+        <div class="mb-12">
+          <h2 class="text-xl font-semibold text-white mb-4">Contact Us</h2>
+          <p class="text-gray-400 leading-relaxed">
+            If you have questions about this privacy policy, email us at{" "}
+            <a
+              href="mailto:support@giftlylists.com"
+              class="text-[#D90701] hover:text-[#BF0600] underline underline-offset-4 transition-colors duration-200"
+            >
+              support@giftlylists.com
+            </a>.
+          </p>
+        </div>
+      </div>
+
+      <!-- Footer Card -->
+      <div
+        class="mt-16 p-6 bg-white/[0.02] border border-white/[0.06] rounded-2xl"
+      >
+        <p class="text-sm text-gray-500 text-center">
+          Have questions? We're here to help.{" "}
+          <a
+            href="/support"
+            class="text-[#D90701] hover:text-[#BF0600] transition-colors duration-200"
+          >
+            Visit support
+          </a>
+        </p>
+      </div>
+    </div>
+  </section>
 </Base>
