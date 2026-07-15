@@ -2,7 +2,11 @@
 import Base from "../layouts/Base.astro";
 ---
 
-<Base title="Giftly Lists — Share Gift Lists">
+<Base
+  title="Giftly Lists — Free Gift List & Wishlist Sharing App"
+  description="Create and share gift wishlists with family and friends. Reserve gifts secretly so surprises stay surprises. Free to start, no account needed to view."
+  canonicalPath="/"
+>
   <!-- Hero Section -->
   <section
     class="relative min-h-screen flex items-center justify-center overflow-hidden"
@@ -196,6 +200,25 @@ import Base from "../layouts/Base.astro";
     </div>
   </section>
 
+  <!-- NEW: SEO content section -->
+  <section class="relative py-12 sm:py-16">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">
+        The easiest way to share a wishlist
+      </h2>
+      <p class="text-gray-500 text-lg leading-relaxed mb-4">
+        Giftly Lists is a free wishlist app built for birthdays, holidays,
+        weddings, baby showers and more. Create a gift list in seconds, share it
+        with one link, and let family and friends reserve items — so no one buys
+        the same gift twice and the surprise stays a surprise.
+      </p>
+      <p class="text-gray-500 text-lg leading-relaxed">
+        Anyone can view and reserve gifts from a shared list, making it simple
+        for grandparents, coworkers, and extended family to pitch in.
+      </p>
+    </div>
+  </section>
+
   <!-- Pricing Section -->
   <section class="relative py-12 sm:py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -321,5 +344,89 @@ import Base from "../layouts/Base.astro";
         </div>
       </div>
     </div>
+  </section>
+
+  <!-- NEW: FAQ section with schema -->
+  <section class="relative py-12 sm:py-16">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl sm:text-4xl font-bold text-white mb-10 text-center">
+        Frequently asked questions
+      </h2>
+      <div class="space-y-8">
+        {
+          [
+            {
+              q: "Is Giftly Lists free to use?",
+              a: "Yes. You can create up to 3 gift lists for free with unlimited items on each list. Upgrading to Pro for $1.99/month unlocks up to 25 lists and removes ads.",
+            },
+            {
+              q: "Can multiple people reserve gifts from the same list?",
+              a: "Yes. Each item can be reserved by one person at a time, so everyone can see what's still available without duplicate gifts.",
+            },
+            {
+              q: "Will the gift-giver know if I reserve an item?",
+              a: "No. Reservations are hidden from the list owner so the surprise stays intact — only other viewers can see what's already been reserved.",
+            },
+            {
+              q: "What occasions is Giftly Lists good for?",
+              a: "Birthdays, holidays, weddings, baby showers, and any occasion where you want to coordinate gift-giving across a group.",
+            },
+          ].map((item, index, array) => (
+            <div
+              class={
+                index !== array.length - 1
+                  ? "border-b border-white/[0.06] pb-8"
+                  : ""
+              }
+            >
+              <h3 class="text-lg font-semibold text-white mb-2">{item.q}</h3>
+              <p class="text-gray-500 leading-relaxed">{item.a}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: [
+          {
+            "@type": "Question",
+            name: "Is Giftly Lists free to use?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Yes. You can create up to 3 gift lists for free with unlimited items on each list. Upgrading to Pro for $1.99/month unlocks up to 25 lists and removes ads.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Can multiple people reserve gifts from the same list?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Yes. Each item can be reserved by one person at a time, so everyone can see what's still available without duplicate gifts.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Will the gift-giver know if I reserve an item?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "No. Reservations are hidden from the list owner so the surprise stays intact — only other viewers can see what's already been reserved.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "What occasions is Giftly Lists good for?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Birthdays, holidays, weddings, baby showers, and any occasion where you want to coordinate gift-giving across a group.",
+            },
+          },
+        ],
+      })}
+    />
   </section>
 </Base>

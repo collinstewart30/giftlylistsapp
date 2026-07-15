@@ -1,11 +1,38 @@
 ---
 import Base from "../layouts/Base.astro";
+
+const lastUpdated = "2026-06-01"; // update this whenever the terms change
+const lastUpdatedDisplay = "June 2026";
 ---
 
 <Base
   title="Terms of Use — Giftly Lists"
-  description="Giftly Lists terms of use — guidelines for using our gift list sharing app."
+  description="Terms of use for Giftly Lists, including account rules, the Giftly Pro subscription, cancellation policy, and Red Surge Technology's liability terms."
+  canonicalPath="/terms"
 >
+  <!-- Breadcrumb structured data -->
+  <script
+    type="application/ld+json"
+    set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://giftlylists.com/",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Terms of Use",
+          item: "https://giftlylists.com/terms",
+        },
+      ],
+    })}
+  />
+
   <!-- Page Header -->
   <section class="relative pt-32 pb-12 sm:pt-40 sm:pb-16">
     <div class="absolute inset-0" aria-hidden="true">
@@ -17,9 +44,11 @@ import Base from "../layouts/Base.astro";
 
     <div class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Back Link -->
+
       <a
         href="/"
-        class="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-[#D90701] transition-colors duration-200 mb-8 group"
+        class="inline-flex items-center gap-2 text-sm text-gray-500
+      hover:text-[#D90701] transition-colors duration-200 mb-8 group"
       >
         <svg
           class="w-4 h-4 transition-transform duration-200 group-hover:-translate-x-1"
@@ -38,7 +67,9 @@ import Base from "../layouts/Base.astro";
       <h1 class="text-4xl sm:text-5xl font-bold tracking-tight text-white mb-4">
         Terms of Use
       </h1>
-      <p class="text-sm text-gray-600">Last updated: June 2026</p>
+      <p class="text-sm text-gray-600">
+        Last updated: <time datetime={lastUpdated}>{lastUpdatedDisplay}</time>
+      </p>
     </div>
   </section>
 
@@ -132,11 +163,14 @@ import Base from "../layouts/Base.astro";
           </ul>
           <p class="text-gray-400 leading-relaxed">
             By subscribing, you also agree to Apple's standard{" "}
+
             <a
               href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
               target="_blank"
               rel="noopener noreferrer"
-              class="text-[#D90701] hover:text-[#BF0600] underline underline-offset-4 transition-colors duration-200"
+              class="text-[#D90701]
+          hover:text-[#BF0600] underline underline-offset-4 transition-colors
+          duration-200"
             >
               Licensed Application End User License Agreement (EULA)
             </a>.
@@ -161,9 +195,12 @@ import Base from "../layouts/Base.astro";
             We reserve the right to suspend or terminate your account if you
             violate these terms. You may delete your account at any time by
             emailing{" "}
+
             <a
               href="mailto:support@giftlylists.com"
-              class="text-[#D90701] hover:text-[#BF0600] underline underline-offset-4 transition-colors duration-200"
+              class="text-[#D90701]
+        hover:text-[#BF0600] underline underline-offset-4 transition-colors
+        duration-200"
             >
               support@giftlylists.com
             </a>.
@@ -210,43 +247,49 @@ import Base from "../layouts/Base.astro";
           <h2 class="text-xl font-semibold text-white mb-4">Contact Us</h2>
           <p class="text-gray-400 leading-relaxed">
             If you have questions about these terms, email us at{" "}
+
             <a
               href="mailto:support@giftlylists.com"
-              class="text-[#D90701] hover:text-[#BF0600] underline underline-offset-4 transition-colors duration-200"
+              class="text-[#D90701]
+      hover:text-[#BF0600] underline underline-offset-4 transition-colors
+      duration-200"
             >
               support@giftlylists.com
             </a>.
           </p>
         </div>
-      </div>
 
-      <!-- Footer Card -->
-      <div
-        class="mt-16 p-6 bg-white/[0.02] border border-white/[0.06] rounded-2xl"
-      >
+        <!-- Footer Card -->
         <div
-          class="flex flex-col sm:flex-row items-center justify-between gap-4"
+          class="mt-16 p-6 bg-white/[0.02] border border-white/[0.06] rounded-2xl"
         >
-          <p class="text-sm text-gray-500 text-center sm:text-left">
-            Have questions about our terms? We're here to clarify.
-          </p>
-          <div class="flex items-center gap-3">
-            <a
-              href="/privacy"
-              class="text-sm text-gray-400 hover:text-[#D90701] transition-colors duration-200"
-            >
-              Privacy Policy
-            </a>
-            <span class="text-gray-700" aria-hidden="true">•</span>
-            <a
-              href="/support"
-              class="text-sm text-gray-400 hover:text-[#D90701] transition-colors duration-200"
-            >
-              Support
-            </a>
+          <div
+            class="flex flex-col sm:flex-row items-center justify-between gap-4"
+          >
+            <p class="text-sm text-gray-500 text-center sm:text-left">
+              Have questions about our terms? We're here to clarify.
+            </p>
+            <div class="flex items-center gap-3">
+              <a
+                href="/privacy"
+                class="text-sm text-gray-400 hover:text-[#D90701]
+      transition-colors duration-200"
+              >
+                Privacy Policy
+              </a>
+              <span class="text-gray-700" aria-hidden="true">•</span>
+
+              <a
+                href="/support"
+                class="text-sm text-gray-400 hover:text-[#D90701]
+    transition-colors duration-200"
+              >
+                Support
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </section>
-</Base>
+  </section></Base
+>

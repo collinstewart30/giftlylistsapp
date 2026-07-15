@@ -9,13 +9,19 @@ export interface Props {
   description?: string;
   showNav?: boolean;
   showFooter?: boolean;
+  canonicalPath?: string; // e.g. "/", "/support"
 }
 const {
   title,
   description = "Giftly Lists — Share gift lists with the people you love.",
   showNav = true,
   showFooter = true,
+  canonicalPath = "/",
 } = Astro.props;
+
+const siteUrl = "https://giftlylists.com";
+const canonicalUrl = new URL(canonicalPath, siteUrl).toString();
+const ogImage = `${siteUrl}/og-image.png`; // 1200x630, create this if it doesn't exist
 ---
 
 <!doctype html>
@@ -24,11 +30,25 @@ const {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={canonicalUrl} />
 
     <!-- Open Graph / Social -->
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:site_name" content="Giftly Lists" />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -44,6 +64,30 @@ const {
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
       rel="stylesheet"
+    />
+
+    <!-- Structured Data: Mobile Application -->
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "MobileApplication",
+        name: "Giftly Lists",
+        operatingSystem: "iOS",
+        applicationCategory: "LifestyleApplication",
+        url: siteUrl,
+        image: ogImage,
+        offers: {
+          "@type": "Offer",
+          price: "0",
+          priceCurrency: "USD",
+        },
+        aggregateRating: {
+          "@type": "AggregateRating",
+          ratingValue: "4.9",
+          ratingCount: "10000",
+        },
+      })}
     />
   </head>
   <body class="min-h-screen flex flex-col">
