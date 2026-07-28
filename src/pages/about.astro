@@ -1,0 +1,401 @@
+---
+// src/pages/about.astro
+import Base from "../layouts/Base.astro";
+---
+
+<Base
+  title="About Giftly Lists — The Gift List App That Keeps Surprises a Surprise"
+  description="Giftly Lists is a shared gift wishlist app for families and friends. Everyone can see and reserve gifts on your list except you — so surprises stay surprises and nobody buys the same gift twice."
+  canonicalPath="/about"
+>
+  <!-- Breadcrumb structured data -->
+  <script
+    type="application/ld+json"
+    set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://giftlylists.com/",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "About",
+          item: "https://giftlylists.com/about",
+        },
+      ],
+    })}
+  />
+
+  <!-- AboutPage + SoftwareApplication structured data -->
+  <script
+    type="application/ld+json"
+    set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "AboutPage",
+      mainEntity: {
+        "@type": "SoftwareApplication",
+        name: "Giftly Lists",
+        applicationCategory: "LifestyleApplication",
+        operatingSystem: "iOS",
+        description:
+          "A shared gift wishlist app that hides reservations from the list owner, so families and friends can coordinate gifts without spoiling the surprise.",
+        offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+      },
+    })}
+  />
+
+  <!-- Hero -->
+  <section class="relative min-h-[70vh] flex flex-col items-center overflow-hidden">
+    <div class="absolute inset-0" aria-hidden="true">
+      <div
+        class="absolute top-0 left-1/4 w-[800px] h-[800px] bg-[#D90701]/[0.03] rounded-full blur-[120px]"
+      >
+      </div>
+      <div
+        class="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-white/[0.01] rounded-full blur-[100px]"
+      >
+      </div>
+    </div>
+
+    <div
+      class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-16 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center"
+    >
+      <div>
+        <a
+          href="/"
+          class="inline-flex items-center gap-2 text-sm text-gray-500
+        hover:text-[#D90701] transition-colors duration-200 mb-8 group"
+        >
+          <svg
+            class="w-4 h-4 transition-transform duration-200 group-hover:-translate-x-1"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            aria-hidden="true"
+          >
+            <path d="M19 12H5M12 19l-7-7 7-7"></path>
+          </svg>
+          Back to home
+        </a>
+
+        <h1
+          class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6 leading-[1.1]"
+        >
+          A gift list built around one rule
+        </h1>
+        <p
+          class="text-lg sm:text-xl text-gray-500 leading-relaxed mb-8 max-w-lg"
+        >
+          Family and friends can see what's already been reserved on your list.
+          You can't. That's the whole idea — and it's why surprises actually
+          stay surprises.
+        </p>
+
+        <a
+          href="https://apps.apple.com/us/app/giftly-lists-shared-lists/id6779746364"
+          class="inline-flex items-center gap-2.5 bg-[#D90701] hover:bg-[#BF0600]
+      text-white px-7 py-3.5 rounded-xl font-medium text-sm transition-all
+      duration-200 active:scale-[0.98]"
+        >
+          Download on the App Store
+        </a>
+      </div>
+
+      <div class="relative">
+        <div
+          class="aspect-[4/5] rounded-3xl overflow-hidden border border-white/[0.08] bg-white/[0.02]"
+        >
+          <img
+            src="/images/about/heroimage.webp"
+            alt="Gifts ready to be shared with family and friends"
+            class="w-full h-full object-cover grayscale-[15%] contrast-[1.05]"
+            loading="eager"
+            width="900"
+            height="1100"
+          />
+        </div>
+        <!-- Floating accent card -->
+        <div
+          class="absolute -bottom-6 -left-6 bg-black border border-white/[0.08] rounded-2xl p-5 shadow-2xl max-w-[220px] hidden sm:block"
+        >
+          <div class="flex items-center gap-2 mb-2">
+            <span class="relative flex h-2 w-2">
+              <span
+                class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"
+              ></span>
+              <span
+                class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"
+              ></span>
+            </span>
+            <span class="text-xs text-gray-500">Reserved by Sarah</span>
+          </div>
+          <p class="text-sm text-white font-medium">Hidden from list owner</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- What is Giftly Lists -->
+    <section class="relative py-20 sm:py-28">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-2xl mb-8">
+          <p
+            class="text-xs font-medium text-gray-500 uppercase tracking-[0.2em] mb-4"
+          >
+            What it is
+          </p>
+          <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">
+            More than a wishlist
+          </h2>
+        </div>
+        <div class="prose prose-invert prose-lg max-w-none">
+          <p class="text-gray-400 leading-relaxed mb-4">
+            Giftly Lists is a shared wishlist app for birthdays, holidays,
+            weddings, baby showers, and any occasion where more than one person
+            is buying gifts for the same event. You build a list of things you
+            want, share it with a link, and the people who matter to you can
+            browse it and reserve items — so two people don't show up with the
+            same present, and nobody wastes money on something you already own.
+          </p>
+          <p class="text-gray-400 leading-relaxed">
+            What makes Giftly Lists different from a typical wishlist or
+            registry is what happens after someone reserves a gift. Family and
+            friends can see which items are already claimed. The person whose
+            list it is cannot. That one rule is the whole point of the app —
+            it's what keeps a wishlist from accidentally spoiling every surprise
+            on it.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- The problem — image left, text right -->
+    <section class="relative py-20 sm:py-28 border-t border-white/[0.04]">
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center"
+      >
+        <div
+          class="rounded-3xl overflow-hidden border border-white/[0.08] aspect-[4/3] order-2 lg:order-1"
+        >
+          <img
+            src="https://picsum.photos/seed/giftlyproblem/900/675"
+            alt="Friends coordinating gift plans together"
+            class="w-full h-full object-cover grayscale-[15%] contrast-[1.05]"
+            loading="lazy"
+            width="900"
+            height="675"
+          />
+        </div>
+        <div class="order-1 lg:order-2">
+          <p
+            class="text-xs font-medium text-gray-500 uppercase tracking-[0.2em] mb-4"
+          >
+            The problem
+          </p>
+          <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">
+            Most gift lists only solve half the problem
+          </h2>
+          <p class="text-gray-400 leading-relaxed mb-4">
+            A shared spreadsheet or a public registry link stops people from
+            double-buying — but only if the list owner never opens it, because
+            the moment they do, they see exactly what's been checked off and by
+            whom.
+          </p>
+          <p class="text-gray-400 leading-relaxed">
+            Group texts have the same issue: coordinating "who's getting what"
+            out loud usually means the person receiving the gifts is included in
+            the conversation, whether anyone means for that to happen or not.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works — step cards -->
+    <section class="relative py-20 sm:py-28 border-t border-white/[0.04]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-2xl mb-16 text-center mx-auto">
+          <p
+            class="text-xs font-medium text-gray-500 uppercase tracking-[0.2em] mb-4"
+          >
+            How it works
+          </p>
+          <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">
+            Four steps to a stress-free gift season
+          </h2>
+        </div>
+
+        <div
+          class="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-white/[0.04] rounded-2xl overflow-hidden"
+        >
+          {
+            [
+              {
+                icon: "📝",
+                title: "Create a list",
+                description:
+                  "Add the gifts you'd like for any occasion, with as much or as little detail as you want.",
+              },
+              {
+                icon: "🔗",
+                title: "Share the link",
+                description:
+                  "Send it to family and friends. No account or download needed to view it.",
+              },
+              {
+                icon: "🎁",
+                title: "They reserve gifts",
+                description:
+                  "Everyone can see what's still available as items get claimed.",
+              },
+              {
+                icon: "🙈",
+                title: "You stay surprised",
+                description:
+                  "Open your own list anytime — reservations are simply never shown to you.",
+              },
+            ].map((step) => (
+              <div class="group relative bg-black p-8 sm:p-10 hover:bg-white/[0.02] transition-colors duration-300">
+                <div class="w-12 h-12 bg-white/[0.03] border border-white/[0.06] rounded-xl flex items-center justify-center mb-6 text-2xl group-hover:border-[#D90701]/20 group-hover:bg-[#D90701]/[0.03] transition-all duration-300">
+                  {step.icon}
+                </div>
+                <h3 class="text-base font-semibold text-white mb-3">
+                  {step.title}
+                </h3>
+                <p class="text-sm text-gray-500 leading-relaxed">
+                  {step.description}
+                </p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- Who it's for — text left, image right -->
+    <section class="relative py-20 sm:py-28 border-t border-white/[0.04]">
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center"
+      >
+        <div>
+          <p
+            class="text-xs font-medium text-gray-500 uppercase tracking-[0.2em] mb-4"
+          >
+            Who it's for
+          </p>
+          <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">
+            Built for the whole family
+          </h2>
+          <p class="text-gray-400 leading-relaxed mb-4">
+            Giftly Lists works well for large extended families coordinating a
+            holiday, parents managing a kid's birthday list with grandparents
+            and aunts and uncles, couples building a wedding or baby registry
+            outside the big retail sites, or any friend group tired of texting
+            "did anyone get them X yet?" back and forth.
+          </p>
+          <p class="text-gray-400 leading-relaxed">
+            If more than one person might be buying a gift for the same
+            occasion, that's exactly the situation the app is built for.
+          </p>
+        </div>
+        <div
+          class="rounded-3xl overflow-hidden border border-white/[0.08] aspect-[4/3]"
+        >
+          <img
+            src="https://picsum.photos/seed/giftlyfamily/900/675"
+            alt="An extended family gathered for a holiday celebration"
+            class="w-full h-full object-cover grayscale-[15%] contrast-[1.05]"
+            loading="lazy"
+            width="900"
+            height="675"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="relative py-20 sm:py-28 border-t border-white/[0.04]">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p
+          class="text-xs font-medium text-gray-500 uppercase tracking-[0.2em] mb-4"
+        >
+          Pricing
+        </p>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">
+          Simple, honest pricing
+        </h2>
+        <p class="text-gray-400 leading-relaxed">
+          Giftly Lists is free to start, with up to 3 gift lists at no cost.
+          Giftly Pro is $1.99 a month for anyone who wants up to 25 lists and an
+          ad-free experience — but the core idea behind the app, hiding
+          reservations from the list owner, works the same way on every plan.
+        </p>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="relative pb-24 sm:pb-32">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="bg-[#D90701] border border-[#D90701] rounded-2xl p-8 sm:p-12 relative overflow-hidden"
+        >
+          <div class="absolute inset-0 opacity-10" aria-hidden="true">
+            <div
+              class="absolute -top-24 -right-24 w-48 h-48 bg-white rounded-full blur-3xl"
+            >
+            </div>
+            <div
+              class="absolute -bottom-24 -left-24 w-48 h-48 bg-black rounded-full blur-3xl"
+            >
+            </div>
+          </div>
+
+          <div
+            class="relative flex flex-col sm:flex-row sm:items-center justify-between gap-6"
+          >
+            <div>
+              <h2 class="text-2xl font-semibold text-white mb-2">
+                Ready to make your next list?
+              </h2>
+              <p class="text-white/70 text-sm leading-relaxed">
+                Free to start. No credit card required.
+              </p>
+            </div>
+
+            <a
+              href="https://apps.apple.com/us/app/giftly-lists-shared-lists/id6779746364"
+              class="inline-flex items-center justify-center gap-2 bg-white
+        hover:bg-gray-100 text-black px-6 py-3 rounded-xl font-medium text-sm
+        transition-all duration-200 active:scale-[0.98] whitespace-nowrap"
+            >
+              Download on the App Store
+            </a>
+          </div>
+        </div>
+
+        <!-- Internal links -->
+        <div class="mt-8 flex flex-wrap gap-6 justify-center text-sm">
+          <a
+            href="/support"
+            class="text-gray-500 hover:text-[#D90701] transition-colors duration-200"
+            >Support</a
+          >
+          <a
+            href="/privacy"
+            class="text-gray-500 hover:text-[#D90701] transition-colors duration-200"
+            >Privacy Policy</a
+          >
+          <a
+            href="/terms"
+            class="text-gray-500 hover:text-[#D90701] transition-colors duration-200"
+            >Terms of Use</a
+          >
+        </div>
+      </div>
+    </section>
+  </section></Base
+>
