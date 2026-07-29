@@ -6,7 +6,7 @@ import Base from "../layouts/Base.astro";
 <Base
   title="About Giftly Lists — The Gift List App That Keeps Surprises a Surprise"
   description="Giftly Lists is a shared gift wishlist app for families and friends. Everyone can see and reserve gifts on your list except you — so surprises stay surprises and nobody buys the same gift twice."
-  canonicalPath="/about"
+  canonicalPath="/about/"
 >
   <!-- Breadcrumb structured data -->
   <script
@@ -25,7 +25,7 @@ import Base from "../layouts/Base.astro";
           "@type": "ListItem",
           position: 2,
           name: "About",
-          item: "https://giftlylists.com/about",
+          item: "https://giftlylists.com/about/",
         },
       ],
     })}
@@ -183,7 +183,7 @@ import Base from "../layouts/Base.astro";
           class="rounded-3xl overflow-hidden border border-white/[0.08] aspect-[4/3] order-2 lg:order-1"
         >
           <img
-            src="https://picsum.photos/seed/giftlyproblem/900/675"
+            src="/images/about/secondimage.webp"
             alt="Friends coordinating gift plans together"
             class="w-full h-full object-cover grayscale-[15%] contrast-[1.05]"
             loading="lazy"
@@ -306,7 +306,7 @@ import Base from "../layouts/Base.astro";
           class="rounded-3xl overflow-hidden border border-white/[0.08] aspect-[4/3]"
         >
           <img
-            src="https://picsum.photos/seed/giftlyfamily/900/675"
+            src="/images/about/thirdimage.webp"
             alt="An extended family gathered for a holiday celebration"
             class="w-full h-full object-cover grayscale-[15%] contrast-[1.05]"
             loading="lazy"
@@ -380,17 +380,17 @@ import Base from "../layouts/Base.astro";
         <!-- Internal links -->
         <div class="mt-8 flex flex-wrap gap-6 justify-center text-sm">
           <a
-            href="/support"
+            href="/support/"
             class="text-gray-500 hover:text-[#D90701] transition-colors duration-200"
             >Support</a
           >
           <a
-            href="/privacy"
+            href="/privacy/"
             class="text-gray-500 hover:text-[#D90701] transition-colors duration-200"
             >Privacy Policy</a
           >
           <a
-            href="/terms"
+            href="/terms/"
             class="text-gray-500 hover:text-[#D90701] transition-colors duration-200"
             >Terms of Use</a
           >

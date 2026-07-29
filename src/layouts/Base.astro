@@ -9,7 +9,7 @@ export interface Props {
   description?: string;
   showNav?: boolean;
   showFooter?: boolean;
-  canonicalPath?: string; // e.g. "/", "/support"
+  canonicalPath?: string; // e.g. "/", "/support/"
 }
 const {
   title,
@@ -58,14 +58,6 @@ const ogImage = `${siteUrl}/og-image.png`; // 1200x630, create this if it doesn'
 
     <title>{title}</title>
 
-    <!-- Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
-
     <!-- Structured Data: Mobile Application -->
     <script
       type="application/ld+json"
@@ -89,6 +81,19 @@ const ogImage = `${siteUrl}/og-image.png`; // 1200x630, create this if it doesn'
         },
       })}
     />
+
+    <!-- Google Analytics (GA4) via Partytown -->
+    <script
+      type="text/partytown"
+      src="https://www.googletagmanager.com/gtag/js?id=G-WLWEWCWKX5"></script>
+    <script type="text/partytown">
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-WLWEWCWKX5");
+    </script>
   </head>
   <body class="min-h-screen flex flex-col">
     {showNav && <Nav />}
