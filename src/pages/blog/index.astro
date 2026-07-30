@@ -1,14 +1,19 @@
 ---
-//src/blog/index.astro
 import Base from "../../layouts/Base.astro";
 import { getCollection } from "astro:content";
 import { Image } from "astro:assets";
+
+const PAGE1_GRID_SIZE = 9;
+const PAGE_SIZE = 12;
 
 const posts = (await getCollection("blog")).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 
-const [featuredPost, ...restPosts] = posts;
+const [featuredPost, ...rest] = posts;
+const gridPosts = rest.slice(0, PAGE1_GRID_SIZE);
+const remaining = rest.slice(PAGE1_GRID_SIZE);
+const totalPages = 1 + Math.ceil(remaining.length / PAGE_SIZE);
 
 const formatDate = (date: Date) =>
   date.toLocaleDateString("en-US", {
@@ -38,7 +43,7 @@ const formatDate = (date: Date) =>
         name: "Giftly Lists",
         url: "https://giftlylists.com/",
       },
-      blogPost: posts.map((post) => ({
+      blogPost: [featuredPost, ...gridPosts].map((post) => ({
         "@type": "BlogPosting",
         headline: post.data.title,
         description: post.data.description,
@@ -210,20 +215,20 @@ const formatDate = (date: Date) =>
 
   <!-- Post grid -->
   {
-    restPosts.length > 0 && (
-      <section class="relative pb-24 sm:pb-32">
+    gridPosts.length > 0 && (
+      <section class="relative pb-16 sm:pb-20">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="flex items-center justify-between mb-8">
             <h2 class="text-sm font-medium text-gray-500 uppercase tracking-[0.15em]">
               More posts
             </h2>
             <span class="text-sm text-gray-600">
-              {restPosts.length} article{restPosts.length === 1 ? "" : "s"}
+              {rest.length} article{rest.length === 1 ? "" : "s"}
             </span>
           </div>
 
           <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-white/[0.04] rounded-2xl overflow-hidden">
-            {restPosts.map((post) => (
+            {gridPosts.map((post) => (
               <a
                 href={`/blog/${post.id}/`}
                 class="group flex flex-col bg-black hover:bg-white/[0.02] transition-colors duration-300"
@@ -264,6 +269,48 @@ const formatDate = (date: Date) =>
               </a>
             ))}
           </div>
+        </div>
+      </section>
+    )
+  }
+
+  <!-- Pagination -->
+  {
+    totalPages > 1 && (
+      <section class="relative pb-16 sm:pb-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <nav
+            aria-label="Blog pagination"
+            class="flex items-center justify-center gap-2"
+          >
+            <span
+              aria-disabled="true"
+              class="px-4 py-2 rounded-lg text-sm text-gray-700 cursor-not-allowed select-none"
+            >
+              Previous
+            </span>
+
+            {Array.from({ length: totalPages }, (_, i) => i + 1).map((n) => (
+              <a
+                href={n === 1 ? "/blog/" : `/blog/${n}/`}
+                aria-current={n === 1 ? "page" : undefined}
+                class={
+                  n === 1
+                    ? "px-4 py-2 rounded-lg text-sm font-medium bg-[#D90701] text-white"
+                    : "px-4 py-2 rounded-lg text-sm text-gray-500 hover:text-white hover:bg-white/[0.04] transition-colors duration-200"
+                }
+              >
+                {n}
+              </a>
+            ))}
+
+            <a
+              href="/blog/2/"
+              class="px-4 py-2 rounded-lg text-sm text-gray-500 hover:text-white hover:bg-white/[0.04] transition-colors duration-200"
+            >
+              Next
+            </a>
+          </nav>
         </div>
       </section>
     )
