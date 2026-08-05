@@ -1,7 +1,7 @@
 ---
 title: "How to Keep Your Kid's Birthday Gifts a Surprise (And Avoid the Dreaded Duplicate Lego Set)"
 description: "Coordinating gifts for a child's birthday party can feel like navigating a minefield of duplicate toys and spoiled surprises. Here's how to keep the magic alive — for the kids and the parents."
-pubDate: 2026-08-12
+pubDate: 2026-08-04
 tags: ["birthdays", "gift guides", "surprises"]
 heroImage: /images/blog/kids-birthday-gift-surprise/heroimage.webp
 ---
