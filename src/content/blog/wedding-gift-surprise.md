@@ -1,7 +1,7 @@
 ---
 title: "How to Keep Wedding Gifts a Surprise (Even When You Have a Registry)"
 description: "Wedding registries are practical, but they often spoil every surprise. Here's how to combine a public registry with a hidden-reservation list so you know what you need without ruining the magic."
-pubDate: 2026-09-16
+pubDate: 2026-08-08
 tags: ["weddings", "gift guides", "surprises"]
 heroImage: /images/blog/wedding-gift-surprise/heroimage.webp
 ---

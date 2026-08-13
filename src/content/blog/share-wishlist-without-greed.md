@@ -1,7 +1,7 @@
 ---
 title: "How to Share Your Gift Wishlist Without Feeling Selfish (It's Actually a Gift to Everyone Else)"
 description: "Many of us cringe at the idea of sharing a wishlist — it feels demanding or greedy. Here's why that instinct is wrong, and how a hidden-reservation list turns wish-sharing into an act of generosity."
-pubDate: 2026-09-09
+pubDate: 2026-08-13
 tags: ["gift guides", "surprises", "etiquette"]
 heroImage: /images/blog/share-wishlist-without-greed/heroimage.webp
 ---

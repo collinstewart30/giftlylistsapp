@@ -1,7 +1,7 @@
 ---
 title: "How to Organize a Secret Santa Gift Exchange That Keeps Every Surprise Safe"
 description: "A Secret Santa exchange should be a delightful mystery — not a minefield of spoilers and awkward duplicates. Here's how to coordinate gifts so the surprises stay intact and everyone gets something they'll actually love."
-pubDate: 2026-08-26
+pubDate: 2026-08-10
 tags: ["gift guides", "surprises", "holidays"]
 heroImage: /images/blog/secret-santa-surprise/heroimage.webp
 ---

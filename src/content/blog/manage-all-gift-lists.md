@@ -1,7 +1,7 @@
 ---
 title: "How to Manage All Your Gift Lists in One Place (And Keep Every Surprise Safe)"
 description: "Juggling birthday lists, baby shower plans, and Christmas wishlists across different apps is a recipe for stress. Here's how to organize everything in one place — while keeping every surprise intact."
-pubDate: 2026-09-02
+pubDate: 2026-08-07
 tags: ["gift guides", "surprises", "organization"]
 heroImage: /images/blog/manage-all-gift-lists/heroimage.webp
 ---

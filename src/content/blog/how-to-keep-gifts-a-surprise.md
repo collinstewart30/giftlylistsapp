@@ -1,7 +1,7 @@
 ---
 title: "How to Keep Group Gift Surprises Actually Surprising (And Why Spreadsheets Fail)"
 description: "Coordinating gifts with a group shouldn't ruin the surprise. Learn why most approaches backfire and how to set up a wishlist that keeps the magic alive."
-pubDate: 2026-07-29
+pubDate: 2026-08-12
 tags: ["gift guides", "surprises"]
 heroImage: /images/blog/how-to-keep-gifts-a-surprise/heroimage.webp
 ---
