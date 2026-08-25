@@ -1,7 +1,7 @@
 ---
 title: "How to Plan a Mother's Day Gift That Actually Feels Personal (And Keep It a Secret)"
 description: "Mother's Day gifts too often fall into the same old patterns. Here's how to coordinate a meaningful, surprise-filled gift for Mom — without her catching a single clue."
-pubDate: 2026-10-07
+pubDate: 2026-08-25
 tags: ["gift guides", "surprises", "mothers day"]
 heroImage: /images/blog/mothers-day-gift-surprise/heroimage.webp
 ---
