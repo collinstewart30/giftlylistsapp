@@ -1,7 +1,7 @@
 ---
 title: "How to Coordinate Gifts With Family Who Live Far Away (Without the Group Chat Chaos)"
 description: "When your family is spread across the country, coordinating gifts gets complicated fast. Here's how to organize group gifts, share wishlists, and keep surprises intact — from a thousand miles away."
-pubDate: 2026-09-29
+pubDate: 2026-09-30
 tags: ["gift guides", "surprises", "long distance"]
 heroImage: /images/blog/long-distance-family-gift-coordination/heroimage.webp
 ---
