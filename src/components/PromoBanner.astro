@@ -1,0 +1,145 @@
+---
+// src/components/PromoBanner.astro
+const CODE = "GIFTLY30";
+const REDEEM_URL = `https://apps.apple.com/redeem?ctx=offercodes&id=6779746364&code=${CODE}`;
+---
+
+<!-- Hidden by default; the script reveals it so dismissed visitors never see a flash -->
+<div id="promo-banner" class="hidden mx-4 mt-2 sm:mx-6 lg:mx-8">
+  <div
+    class="promo-card relative max-w-7xl mx-auto overflow-hidden rounded-2xl border border-[#D90701]/30 bg-gradient-to-r from-[#D90701]/25 via-black/50 to-[#D90701]/10 backdrop-blur-2xl shadow-[0_8px_32px_-12px_rgba(217,7,1,0.5)]"
+  >
+    <!-- Soft glow behind the icon -->
+    <div
+      class="pointer-events-none absolute -left-8 top-1/2 h-24 w-24 -translate-y-1/2 rounded-full bg-[#D90701]/30 blur-2xl"
+      aria-hidden="true"
+    >
+    </div>
+
+    <div class="relative flex items-center gap-3 px-3 py-2.5 sm:gap-4 sm:px-4">
+      <!-- Icon tile -->
+      <div
+        class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-white/[0.1] bg-white/[0.06] text-lg"
+        aria-hidden="true"
+      >
+        🎁
+      </div>
+
+      <!-- Message -->
+      <div class="min-w-0 flex-1">
+        <p class="text-sm font-semibold leading-tight text-white">
+          Your first month of Pro is free
+        </p>
+        <p class="mt-0.5 truncate text-xs leading-tight text-gray-400">
+          <span class="sm:hidden">New subscribers · then $0.99/month</span>
+          <span class="hidden sm:inline">
+            Redeem in the App Store, then $0.99/month. New subscribers only.
+          </span>
+        </p>
+      </div>
+
+      <!-- Code chip (copy) — desktop/tablet only -->
+      <button
+        id="promo-copy"
+        type="button"
+        class="hidden shrink-0 items-center gap-2 rounded-xl border border-dashed border-white/20 bg-black/30 px-3 py-2 transition-colors duration-200 hover:border-[#D90701]/60 hover:bg-black/50 sm:flex"
+        aria-label={`Copy promo code ${CODE}`}
+      >
+        <span class="font-mono text-sm font-semibold tracking-wider text-white">
+          {CODE}
+        </span>
+        <span
+          id="promo-copy-label"
+          class="text-[11px] font-medium uppercase tracking-wide text-gray-400"
+        >
+          Copy
+        </span>
+      </button>
+
+      <!-- Redeem -->
+      <a
+        href={REDEEM_URL}
+        class="shrink-0 rounded-xl bg-[#D90701] px-4 py-2 text-sm font-medium text-white transition-all duration-200 hover:bg-[#BF0600] active:scale-[0.98]"
+      >
+        Redeem
+      </a>
+
+      <!-- Dismiss -->
+      <button
+        id="promo-dismiss"
+        type="button"
+        class="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg text-gray-500 transition-colors duration-200 hover:bg-white/[0.06] hover:text-white"
+        aria-label="Dismiss promotion"
+      >
+        <svg
+          class="h-4 w-4"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          aria-hidden="true"
+        >
+          <path d="M6 6l12 12M18 6L6 18"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+<style>
+  .promo-card {
+    animation: promo-in 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+  @keyframes promo-in {
+    from {
+      opacity: 0;
+      transform: translateY(-8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .promo-card {
+      animation: none;
+    }
+  }
+</style>
+
+<script>
+  const banner = document.getElementById("promo-banner");
+  const dismiss = document.getElementById("promo-dismiss");
+  const copyBtn = document.getElementById("promo-copy");
+  const copyLabel = document.getElementById("promo-copy-label");
+  const KEY = "giftly30-banner-dismissed";
+
+  if (banner) {
+    let dismissed = false;
+    try {
+      dismissed = localStorage.getItem(KEY) === "1";
+    } catch {}
+
+    if (!dismissed) banner.classList.remove("hidden");
+
+    dismiss?.addEventListener("click", () => {
+      banner.classList.add("hidden");
+      try {
+        localStorage.setItem(KEY, "1");
+      } catch {}
+    });
+
+    copyBtn?.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText("GIFTLY30");
+        if (copyLabel) copyLabel.textContent = "Copied!";
+        setTimeout(() => {
+          if (copyLabel) copyLabel.textContent = "Copy";
+        }, 1800);
+      } catch {
+        if (copyLabel) copyLabel.textContent = "GIFTLY30";
+      }
+    });
+  }
+</script>
