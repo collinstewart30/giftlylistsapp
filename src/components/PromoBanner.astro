@@ -17,21 +17,12 @@ const REDEEM_URL = `https://apps.apple.com/redeem?ctx=offercodes&id=6779746364&c
     </div>
 
     <div class="relative flex items-center gap-3 px-3 py-2.5 sm:gap-4 sm:px-4">
-      <!-- Icon tile -->
-      <div
-        class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-white/[0.1] bg-white/[0.06] text-lg"
-        aria-hidden="true"
-      >
-        🎁
-      </div>
-
       <!-- Message -->
       <div class="min-w-0 flex-1">
-        <p class="text-sm font-semibold leading-tight text-white">
-          Your first month of Pro is free
+        <p class="text-sm font-semibold leading-tight text-white text-center sm:text-left">
+          FREE month of Pro
         </p>
         <p class="mt-0.5 truncate text-xs leading-tight text-gray-400">
-          <span class="sm:hidden">New subscribers · then $0.99/month</span>
           <span class="hidden sm:inline">
             Redeem in the App Store, then $0.99/month. New subscribers only.
           </span>
@@ -42,7 +33,7 @@ const REDEEM_URL = `https://apps.apple.com/redeem?ctx=offercodes&id=6779746364&c
       <button
         id="promo-copy"
         type="button"
-        class="hidden shrink-0 items-center gap-2 rounded-xl border border-dashed border-white/20 bg-black/30 px-3 py-2 transition-colors duration-200 hover:border-[#D90701]/60 hover:bg-black/50 sm:flex"
+        class="shrink-0 items-center gap-2 rounded-xl border border-dashed border-white/20 bg-black/30 px-3 py-2 transition-colors duration-200 hover:border-[#D90701]/60 hover:bg-black/50 sm:flex"
         aria-label={`Copy promo code ${CODE}`}
       >
         <span class="font-mono text-sm font-semibold tracking-wider text-white">
@@ -63,26 +54,6 @@ const REDEEM_URL = `https://apps.apple.com/redeem?ctx=offercodes&id=6779746364&c
       >
         Redeem
       </a>
-
-      <!-- Dismiss -->
-      <button
-        id="promo-dismiss"
-        type="button"
-        class="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg text-gray-500 transition-colors duration-200 hover:bg-white/[0.06] hover:text-white"
-        aria-label="Dismiss promotion"
-      >
-        <svg
-          class="h-4 w-4"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          aria-hidden="true"
-        >
-          <path d="M6 6l12 12M18 6L6 18"></path>
-        </svg>
-      </button>
     </div>
   </div>
 </div>
