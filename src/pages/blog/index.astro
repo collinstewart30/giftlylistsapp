@@ -170,7 +170,7 @@ const formatDate = (date: Date) =>
                 />
                 <time
                   datetime={featuredPost.data.pubDate.toISOString()}
-                  class="text-xs text-gray-600 uppercase tracking-wide"
+                  class="text-xs text-gray-300 uppercase tracking-wide"
                 >
                   {formatDate(featuredPost.data.pubDate)}
                 </time>
@@ -222,7 +222,7 @@ const formatDate = (date: Date) =>
             <h2 class="text-sm font-medium text-gray-300 uppercase tracking-[0.15em]">
               More posts
             </h2>
-            <span class="text-sm text-gray-600">
+            <span class="text-sm text-gray-300">
               {rest.length} article{rest.length === 1 ? "" : "s"}
             </span>
           </div>
@@ -255,7 +255,7 @@ const formatDate = (date: Date) =>
                 <div class="p-6 sm:p-8 flex flex-col flex-1">
                   <time
                     datetime={post.data.pubDate.toISOString()}
-                    class="text-xs text-gray-600 uppercase tracking-wide mb-2"
+                    class="text-xs text-gray-300 uppercase tracking-wide mb-2"
                   >
                     {formatDate(post.data.pubDate)}
                   </time>
@@ -285,7 +285,7 @@ const formatDate = (date: Date) =>
           >
             <span
               aria-disabled="true"
-              class="px-4 py-2 rounded-lg text-sm text-gray-700 cursor-not-allowed select-none"
+              class="px-4 py-2 rounded-lg text-sm text-gray-300 cursor-not-allowed select-none"
             >
               Previous
             </span>

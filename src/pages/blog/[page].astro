@@ -96,7 +96,7 @@ const formatDate = (date: Date) =>
               <div class="p-6 sm:p-8 flex flex-col flex-1">
                 <time
                   datetime={post.data.pubDate.toISOString()}
-                  class="text-xs text-gray-600 uppercase tracking-wide mb-2"
+                  class="text-xs text-gray-300 uppercase tracking-wide mb-2"
                 >
                   {formatDate(post.data.pubDate)}
                 </time>
@@ -127,7 +127,7 @@ const formatDate = (date: Date) =>
           ) : (
             <span
               aria-disabled="true"
-              class="px-4 py-2 rounded-lg text-sm text-gray-700 cursor-not-allowed select-none"
+              class="px-4 py-2 rounded-lg text-sm text-gray-300 cursor-not-allowed select-none"
             >
               Previous
             </span>
@@ -161,7 +161,7 @@ const formatDate = (date: Date) =>
           ) : (
             <span
               aria-disabled="true"
-              class="px-4 py-2 rounded-lg text-sm text-gray-700 cursor-not-allowed select-none"
+              class="px-4 py-2 rounded-lg text-sm text-gray-300 cursor-not-allowed select-none"
             >
               Next
             </span>
