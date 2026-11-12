@@ -92,7 +92,7 @@ const formatDate = (date: Date) =>
       <!-- Back to blog -->
       <a
         href="/blog/"
-        class="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-[#D90701] transition-colors duration-200 mb-8 group"
+        class="inline-flex items-center gap-2 text-sm text-gray-300 hover:text-[#D90701] transition-colors duration-200 mb-8 group"
       >
         <svg
           class="w-4 h-4 transition-transform duration-200 group-hover:-translate-x-1"
@@ -110,7 +110,7 @@ const formatDate = (date: Date) =>
       <div class="max-w-4xl">
         <!-- Blog label (matching index hero) -->
         <p
-          class="text-xs font-medium text-gray-500 uppercase tracking-[0.2em] mb-4"
+          class="text-xs font-medium text-gray-300 uppercase tracking-[0.2em] mb-4"
         >
           Blog
         </p>
@@ -132,7 +132,7 @@ const formatDate = (date: Date) =>
 
         <!-- Description -->
         <p
-          class="text-lg sm:text-xl text-gray-500 mt-6 leading-relaxed max-w-3xl"
+          class="text-lg sm:text-xl text-gray-300 mt-6 leading-relaxed max-w-3xl"
         >
           {post.data.description}
         </p>
@@ -142,7 +142,7 @@ const formatDate = (date: Date) =>
           post.data.tags.length > 0 && (
             <div class="flex flex-wrap gap-2 mt-8">
               {post.data.tags.map((tag) => (
-                <span class="text-xs text-gray-500 bg-white/[0.04] border border-white/[0.06] rounded-full px-3 py-1">
+                <span class="text-xs text-gray-300 bg-white/[0.04] border border-white/[0.06] rounded-full px-3 py-1">
                   {tag}
                 </span>
               ))}

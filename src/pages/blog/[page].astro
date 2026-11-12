@@ -103,7 +103,7 @@ const formatDate = (date: Date) =>
                 <h3 class="text-lg font-semibold text-white mb-2 leading-snug group-hover:text-[#D90701] transition-colors duration-200">
                   {post.data.title}
                 </h3>
-                <p class="text-sm text-gray-500 leading-relaxed line-clamp-3">
+                <p class="text-sm text-gray-300 leading-relaxed line-clamp-3">
                   {post.data.description}
                 </p>
               </div>
@@ -120,7 +120,7 @@ const formatDate = (date: Date) =>
           url.prev ? (
             <a
               href={url.prev}
-              class="px-4 py-2 rounded-lg text-sm text-gray-500 hover:text-white hover:bg-white/[0.04] transition-colors duration-200"
+              class="px-4 py-2 rounded-lg text-sm text-gray-300 hover:text-white hover:bg-white/[0.04] transition-colors duration-200"
             >
               Previous
             </a>
@@ -142,7 +142,7 @@ const formatDate = (date: Date) =>
               class={
                 n === currentPage
                   ? "px-4 py-2 rounded-lg text-sm font-medium bg-[#D90701] text-white"
-                  : "px-4 py-2 rounded-lg text-sm text-gray-500 hover:text-white hover:bg-white/[0.04] transition-colors duration-200"
+                  : "px-4 py-2 rounded-lg text-sm text-gray-300 hover:text-white hover:bg-white/[0.04] transition-colors duration-200"
               }
             >
               {n}
@@ -154,7 +154,7 @@ const formatDate = (date: Date) =>
           url.next ? (
             <a
               href={url.next}
-              class="px-4 py-2 rounded-lg text-sm text-gray-500 hover:text-white hover:bg-white/[0.04] transition-colors duration-200"
+              class="px-4 py-2 rounded-lg text-sm text-gray-300 hover:text-white hover:bg-white/[0.04] transition-colors duration-200"
             >
               Next
             </a>
